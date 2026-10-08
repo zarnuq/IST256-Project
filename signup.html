@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Project Alpha</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/brite/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="index.html"><i class="bi bi-cpu-fill" aria-hidden="true"></i>Project Alpha</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="signup.html">Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true" tabindex="-1" href="#">Shop <span class="badge text-bg-light border soon">Soon</span></a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true" tabindex="-1" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a class="btn btn-outline-dark disabled" aria-disabled="true" tabindex="-1" href="#" aria-label="Cart (coming soon)"><i class="bi bi-cart3"></i></a>
+          <a class="btn btn-primary" href="signup.html">Join now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h1 class="fw-bold mb-1">Create your account</h1>
+        <p class="text-body-secondary mb-0">Join Project Alpha to save builds and check out parts later. Fields marked * are required.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Sign-up form -->
+        <div class="col-lg-7">
+          <div class="card-brite p-4">
+            <div id="formAlert" role="alert" aria-live="polite"></div>
+
+            <!-- novalidate: the browser's own pop-ups are turned off so our JavaScript validation messages show instead -->
+            <form id="signupForm" novalidate>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full name *</label>
+                <input type="text" class="form-control" id="fullName" name="fullName"
+                       placeholder="Jane Doe" autocomplete="name" maxlength="80" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address *</label>
+                <input type="email" class="form-control" id="email" name="email"
+                       placeholder="jane@example.com" autocomplete="email" maxlength="254" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4 mb-3">
+                  <label for="age" class="form-label">Age *</label>
+                  <input type="text" inputmode="numeric" class="form-control" id="age" name="age"
+                         placeholder="21" maxlength="3" required>
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-sm-8 mb-3">
+                  <label for="phone" class="form-label">Phone <span class="text-body-secondary fw-normal">(optional)</span></label>
+                  <input type="tel" class="form-control" id="phone" name="phone"
+                         placeholder="(814) 555-0123" autocomplete="tel" maxlength="25">
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="address" class="form-label">Address *</label>
+                <input type="text" class="form-control" id="address" name="address"
+                       placeholder="123 College Ave, State College, PA 16801" autocomplete="street-address" maxlength="140" required>
+                <div class="invalid-feedback"></div>
+                <div class="form-text">Used later for shipping your parts.</div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2">
+                <button type="submit" class="btn btn-primary btn-lg">Create account</button>
+                <button type="reset" class="btn btn-light btn-lg" id="resetBtn">Clear form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Side info -->
+        <div class="col-lg-5">
+          <div class="card-brite p-4 mb-4">
+            <h2 class="h5 fw-bold"><i class="bi bi-shield-check me-1" aria-hidden="true"></i>Validation rules</h2>
+            <ul class="rules-list ps-3 mb-0">
+              <li><strong>Name:</strong> 2 to 60 letters (spaces, hyphens and apostrophes allowed)</li>
+              <li><strong>Email:</strong> must be a valid format and not already registered</li>
+              <li><strong>Age:</strong> a whole number from 13 to 120</li>
+              <li><strong>Phone:</strong> optional, 10 to 15 digits if provided</li>
+              <li><strong>Address:</strong> 5 to 120 characters</li>
+            </ul>
+          </div>
+
+          <div class="card-brite p-4">
+            <h2 class="h5 fw-bold"><i class="bi bi-people-fill me-1" aria-hidden="true"></i>Members so far</h2>
+            <p class="display-6 fw-bold mb-1" id="memberCount">0</p>
+            <p class="text-body-secondary">Data is saved as JSON in this browser. You can download it as <code>users.json</code> from the members page.</p>
+            <a href="members.html" class="btn btn-dark">View &amp; edit members</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span><strong>Project Alpha</strong> &middot; Web Development group project</span>
+      <span class="small">Oliver Aaron &middot; Jeremy Hou &middot; Miles Alford &middot; Anson Poon &middot; Aryan Vir</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
