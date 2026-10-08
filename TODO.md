@@ -29,7 +29,7 @@ The files in this folder are stubs: fill in every `TODO` comment by hand. `refer
 - [ ] `styles.css`: every section in the stub
 - [ ] Check: the homepage looks like `reference/index.html` at desktop and phone width
 
-## Task 3: Sign-up page [YOUR NAME]
+## Task 3: Sign-up page [Anson Poon]
 
 - [ ] `signup.html`: head, navbar, footer, `#formAlert`, `#signupForm` with the five fields, rules card, scripts
 - [ ] `signup.js`: `showAlert`, submit handler, reset handler
