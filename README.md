@@ -18,6 +18,9 @@ A store for PC parts for any kind of build (home, office, school, creative, gami
 3. Commit small and often; `git pull` before each session.
 4. Push and open a pull request for Jeremy or Miles to merge: `git add . && git commit -m "your commit message" && git push -u origin HEAD`
 
+>[!IMPORTANT]
+>MAKE SURE TO `git pull origin main` from remote to sync your branch BEFORE YOU START WORKING EVERY TIME
+
 ## Run it
 
 Open `reference/index.html` to see the finished site. Use VS Code's *Live Server* while building. Needs internet for the CDNs.
