@@ -7,6 +7,10 @@ A store for PC parts for any kind of build (home, office, school, creative, gami
 **Now:** L06 (User/Member Management), due **Sun Oct 11**. The files in this folder are stubs with `TODO` comments;
 `reference/` is the finished goal. Tasks are in [`TODO.md`](TODO.md), one group per person.
 
+>[!IMPORTANT]
+>This is the bootstrap link: [https://bootswatch.com/brite/](https://bootswatch.com/brite/), so if you are adding a new element, check here first where you can copy specific code blocks to match styling.
+>Also, please read the  [`README.md`](README.md) AND the [`TODO.md`](TODO.md) and assign yourself a task.
+
 ## How to do:
 
 1. Clone `git clone https://github.com/zarnuq/IST256-Project`.
