@@ -7,6 +7,13 @@ A store for PC parts for any kind of build (home, office, school, creative, gami
 **Now:** L06 (User/Member Management), due **Sun Oct 11**. The files in this folder are stubs with `TODO` comments;
 `reference/` is the finished goal. Tasks are in [`TODO.md`](TODO.md), one group per person.
 
+## How to do:
+
+1. Clone `git clone https://github.com/zarnuq/IST256-Project`.
+2. Work on your own branch: `git checkout -b yourname`.
+3. Commit small and often; `git pull` before each session.
+4. Push and open a pull request for Jeremy or Miles to merge: `git add . && git commit -m "your commit message" && git push -u origin HEAD`
+
 ## Run it
 
 Open `reference/index.html` to see the finished site. Use VS Code's *Live Server* while building. Needs internet for the CDNs.
@@ -72,13 +79,6 @@ storage.js    getMembers()              -> array of members
 - Keep the reference element ids; the JS looks them up.
 - Navbar and footer are copied on every page from `reference/index.html`. Shop and Builder links stay disabled.
 - No passwords until we have a real backend.
-
-## Git
-
-1. Clone `https://github.com/zarnuq/IST256-Project`.
-2. Work on your own branch: `git checkout -b yourname-group`.
-3. Commit small and often; `git pull` before each session.
-4. Push and open a pull request for Jeremy to merge.
 
 ## L06 checklist
 
