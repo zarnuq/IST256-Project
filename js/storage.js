@@ -1,179 +1,42 @@
-/*
- * storage.js
- * The ONLY file that reads or writes member data.
- *
- * Members are kept as a JSON array in the browser (localStorage) and can be
- * exported to / imported from a real users.json file. Later labs (Node + MongoDB)
- * only need to replace the insides of these functions; the pages keep calling
- * UserStore.getAll / add / update / remove exactly the same way.
- *
- * Member shape:
- * {
- *   id, fullName, email, phone, age, address,
- *   role: "customer" | "admin",
- *   createdAt, updatedAt   (ISO date strings)
- * }
- */
-(function (global) {
-  'use strict';
+// storage.js: the only file that reads or writes member data.
+// Group: Shared JS (build this first). Goal: reference/js/storage.js
 
-  const KEY = 'projectAlpha.users';
+const STORAGE_KEY = 'partwise.users';
 
-  function read() {
-    try {
-      const raw = global.localStorage.getItem(KEY);
-      const data = raw ? JSON.parse(raw) : [];
-      return Array.isArray(data) ? data : [];
-    } catch (err) {
-      return [];
-    }
-  }
+// Returns the saved members array (empty if nothing is saved yet).
+function getMembers() {
+  // TODO: read STORAGE_KEY from localStorage, JSON.parse it, and return [] if nothing is saved
+}
 
-  function write(users) {
-    global.localStorage.setItem(KEY, JSON.stringify(users));
-  }
+// Saves the whole members array as JSON.
+function saveMembers(members) {
+  // TODO: JSON.stringify the array and store it in localStorage under STORAGE_KEY
+}
 
-  function newId() {
-    try {
-      if (global.crypto && typeof global.crypto.randomUUID === 'function') {
-        return global.crypto.randomUUID();
-      }
-    } catch (err) { /* fall through */ }
-    return 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
-  }
+// True if a member other than ignoreId already uses this email.
+function emailTaken(email, ignoreId) {
+  // TODO: return true if any saved member has this email and a different id
+}
 
-  // Trim text and store age as a number and email in lower case.
-  function clean(data) {
-    return {
-      fullName: String(data.fullName || '').trim().replace(/\s+/g, ' '),
-      email: String(data.email || '').trim().toLowerCase(),
-      phone: String(data.phone || '').trim(),
-      age: Number(String(data.age).trim()),
-      address: String(data.address || '').trim()
-    };
-  }
+// Saves a new member from form data and returns it.
+function addMember(data) {
+  // TODO: build a member: id (String(Date.now())), the five fields (age as a Number),
+  //       role 'customer', createdAt and updatedAt (new Date().toISOString())
+  // TODO: add it to the saved array, save, and return it
+}
 
-  function emailTaken(users, email, ignoreId) {
-    return users.some(function (u) {
-      return u.email === email && u.id !== ignoreId;
-    });
-  }
+// Replaces an existing member's details with new form data.
+function updateMember(id, data) {
+  // TODO: find the member with this id, copy in the five fields (age as a Number), refresh updatedAt, save
+}
 
-  const UserStore = {
-    getAll() {
-      return read();
-    },
+// Removes the member with this id.
+function deleteMember(id) {
+  // TODO: save the array without the member that has this id
+}
 
-    getById(id) {
-      return read().find(function (u) { return u.id === id; }) || null;
-    },
-
-    count() {
-      return read().length;
-    },
-
-    // Returns { ok: true, user } or { ok: false, errors: { field: message } }
-    add(data) {
-      const users = read();
-      const fields = clean(data);
-      if (emailTaken(users, fields.email, null)) {
-        return { ok: false, errors: { email: 'That email is already registered.' } };
-      }
-      const now = new Date().toISOString();
-      const user = Object.assign({ id: newId() }, fields, {
-        role: 'customer',
-        createdAt: now,
-        updatedAt: now
-      });
-      users.push(user);
-      write(users);
-      return { ok: true, user: user };
-    },
-
-    // Returns { ok: true, user } or { ok: false, errors }
-    update(id, data) {
-      const users = read();
-      const index = users.findIndex(function (u) { return u.id === id; });
-      if (index === -1) {
-        return { ok: false, errors: { _form: 'That member no longer exists.' } };
-      }
-      const fields = clean(data);
-      if (emailTaken(users, fields.email, id)) {
-        return { ok: false, errors: { email: 'That email is already registered.' } };
-      }
-      users[index] = Object.assign({}, users[index], fields, { updatedAt: new Date().toISOString() });
-      write(users);
-      return { ok: true, user: users[index] };
-    },
-
-    remove(id) {
-      const users = read();
-      const next = users.filter(function (u) { return u.id !== id; });
-      write(next);
-      return next.length !== users.length;
-    },
-
-    clearAll() {
-      write([]);
-    },
-
-    // Pretty-printed JSON text, exactly what ends up in users.json.
-    toJSON() {
-      return JSON.stringify(read(), null, 2);
-    },
-
-    // Save the current members as a users.json file download.
-    download(filename) {
-      const blob = new Blob([UserStore.toJSON()], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = filename || 'users.json';
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
-    },
-
-    // Merge members from JSON text. Invalid rows and duplicate emails are skipped.
-    // Returns { ok, added, skipped } or { ok: false, error }
-    importJSON(text) {
-      let parsed;
-      try {
-        parsed = JSON.parse(text);
-      } catch (err) {
-        return { ok: false, error: 'That file is not valid JSON.' };
-      }
-      const rows = Array.isArray(parsed) ? parsed : (parsed && Array.isArray(parsed.users) ? parsed.users : null);
-      if (!rows) {
-        return { ok: false, error: 'Expected a JSON array of members.' };
-      }
-
-      const users = read();
-      let added = 0;
-      let skipped = 0;
-      rows.forEach(function (row) {
-        if (!row || typeof row !== 'object' || !global.Validate.validateUser(row).valid) {
-          skipped += 1;
-          return;
-        }
-        const fields = clean(row);
-        if (emailTaken(users, fields.email, null)) {
-          skipped += 1;
-          return;
-        }
-        const now = new Date().toISOString();
-        users.push(Object.assign({ id: row.id || newId() }, fields, {
-          role: row.role === 'admin' ? 'admin' : 'customer',
-          createdAt: row.createdAt || now,
-          updatedAt: row.updatedAt || now
-        }));
-        added += 1;
-      });
-      write(users);
-      return { ok: true, added: added, skipped: skipped };
-    }
-  };
-
-  global.UserStore = UserStore;
-})(window);
+// Downloads all members as a users.json file.
+function downloadMembers() {
+  // TODO: make a Blob of JSON.stringify(getMembers(), null, 2) with type 'application/json'
+  // TODO: create an <a>, set href = URL.createObjectURL(blob) and download = 'users.json', then click() it
+}

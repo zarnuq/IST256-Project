@@ -1,211 +1,27 @@
-/*
- * styles.css
- * Custom touches layered on top of Bootswatch "Brite" (Bootstrap 5).
- * Brite already provides: white background, lime primary, 2px black borders,
- * hard offset button shadows. Everything here just extends that look.
- */
+/* styles.css: custom touches on top of the Bootswatch Brite theme. */
+/* Group: Homepage and styles. Goal: reference/css/styles.css */
 
-:root {
-  --alpha-lime: #a2e436;
-  --alpha-ink: #000;
-  --alpha-shadow: 4px 4px 0 var(--alpha-ink);
-}
+/* TODO: :root colors: --partwise-lime (#a2e436), --partwise-ink (#000), --partwise-shadow (4px 4px 0 ink) */
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-h1, h2, h3, h4, .brand-logo {
-  font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  letter-spacing: -0.02em;
-}
+/* TODO: body as a flex column so the footer stays at the bottom; Space Grotesk for headings and .brand-logo */
 
 /* ---------- Navbar ---------- */
-
-.brand-logo {
-  font-weight: 700;
-  font-size: 1.35rem;
-}
-
-.brand-logo .bi {
-  background: var(--alpha-lime);
-  border: 2px solid var(--alpha-ink);
-  border-radius: 0.375rem;
-  padding: 0.1rem 0.35rem;
-  margin-right: 0.35rem;
-}
-
-.navbar .nav-link.active {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 6px;
-  text-decoration-color: var(--alpha-lime);
-}
-
-.soon {
-  font-size: 0.65rem;
-  vertical-align: middle;
-}
+/* TODO: .brand-logo and its icon, lime underline on the active link, small .soon badge */
 
 /* ---------- Hero ---------- */
-
-.hero {
-  background: var(--alpha-lime);
-  border-bottom: 2px solid var(--alpha-ink);
-  padding: 4rem 0;
-}
-
-.hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  font-weight: 700;
-  line-height: 1.05;
-}
-
-.marker {
-  background: linear-gradient(transparent 58%, #fff 58%);
-  padding: 0 0.15em;
-}
-
-.hero .lead {
-  max-width: 34rem;
-}
+/* TODO: .hero lime background with a bottom border, big h1, .marker highlight, narrower .lead */
 
 /* ---------- Cards ---------- */
+/* TODO: .card-brite (2px black border, rounded, hard shadow, white) and .feature-icon */
 
-.card-brite {
-  border: 2px solid var(--alpha-ink);
-  border-radius: 0.5rem;
-  box-shadow: var(--alpha-shadow);
-  background: #fff;
-}
-
-.card-lift {
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-}
-
-.card-lift:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--alpha-ink);
-}
-
-.feature-icon {
-  width: 3rem;
-  height: 3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  background: var(--alpha-lime);
-  border: 2px solid var(--alpha-ink);
-  border-radius: 0.5rem;
-}
-
-/* ---------- Build preview placeholder (Three.js goes here in a later lab) ---------- */
-
-.build-slot {
-  aspect-ratio: 4 / 3;
-  border: 2px dashed var(--alpha-ink);
-  border-radius: 0.5rem;
-  background-color: #fafafa;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
-  background-size: 24px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-}
-
-.build-slot .bi {
-  font-size: 3rem;
-}
-
-.spec-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.spec-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.spec-list li:last-child {
-  border-bottom: 0;
-}
+/* ---------- Build preview placeholder ---------- */
+/* TODO: .build-slot dashed box with a grid background, centered content, big icon */
 
 /* ---------- Forms ---------- */
-
-.form-control:focus,
-.form-select:focus {
-  border-color: var(--alpha-ink);
-  box-shadow: 3px 3px 0 var(--alpha-lime);
-}
-
-.form-label {
-  font-weight: 600;
-}
-
-.rules-list li {
-  margin-bottom: 0.35rem;
-}
+/* TODO: focus style for .form-control and bold .form-label */
 
 /* ---------- Members page ---------- */
-
-.table-wrap {
-  overflow-x: auto;
-}
-
-.table td,
-.table th {
-  vertical-align: middle;
-}
-
-.col-address {
-  min-width: 14rem;
-}
-
-.json-preview {
-  background: #111;
-  color: #a2e436;
-  border: 2px solid var(--alpha-ink);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  max-height: 22rem;
-  overflow: auto;
-  font-size: 0.85rem;
-  margin: 0;
-}
+/* TODO: .json-preview dark box with lime text that scrolls */
 
 /* ---------- Footer ---------- */
-
-.site-footer {
-  background: var(--alpha-ink);
-  color: #fff;
-  border-top: 2px solid var(--alpha-ink);
-  padding: 1.75rem 0;
-  flex-shrink: 0;
-}
-
-.site-footer a {
-  color: var(--alpha-lime);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .card-lift {
-    transition: none;
-  }
-}
+/* TODO: .site-footer black with white text and lime links */
