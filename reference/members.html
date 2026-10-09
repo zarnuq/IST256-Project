@@ -16,21 +16,33 @@
 
   <nav class="navbar navbar-expand-lg bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand brand-logo" href="index.html"><i class="bi bi-cpu-fill" aria-hidden="true"></i>Partwise</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand brand-logo" href="index.html"><i class="bi bi-cpu-fill"></i>Partwise</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="members.html">Members</a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true" tabindex="-1" href="#">Shop <span class="badge text-bg-light border soon">Soon</span></a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true" tabindex="-1" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a></li>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="members.html">Members
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Shop <span class="badge text-bg-light border soon">Soon</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a>
+          </li>
         </ul>
-        <div class="d-flex align-items-center gap-2">
-          <a class="btn btn-outline-dark disabled" aria-disabled="true" tabindex="-1" href="#" aria-label="Cart (coming soon)"><i class="bi bi-cart3"></i></a>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-dark disabled" href="#" aria-label="Cart (coming soon)"><i class="bi bi-cart3"></i></a>
           <a class="btn btn-primary" href="signup.html">Join now</a>
         </div>
       </div>
@@ -52,28 +64,30 @@
       </div>
 
       <!-- Member table -->
-      <div class="card-brite p-3 mb-5">
-        <div class="mb-3">
-          <label for="searchInput" class="visually-hidden">Search members</label>
-          <input type="search" class="form-control" id="searchInput" placeholder="Search by name, email, phone or address">
-        </div>
-        <div class="table-responsive">
-          <table class="table table-hover align-middle mb-0">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Age</th>
-                <th scope="col">Address</th>
-                <th scope="col">Role</th>
-                <th scope="col">Joined</th>
-                <th scope="col" class="text-end">Actions</th>
-              </tr>
-            </thead>
-            <tbody id="memberRows"></tbody>
-          </table>
+      <div class="card mb-5">
+        <div class="card-body">
+          <div class="mb-3">
+            <label for="searchInput" class="visually-hidden">Search members</label>
+            <input type="search" class="form-control" id="searchInput" placeholder="Search by name, email, phone or address">
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Joined</th>
+                  <th scope="col" class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="memberRows"></tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -89,12 +103,14 @@
 
   <!-- Edit member modal -->
   <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <form id="editForm" novalidate>
           <div class="modal-header">
-            <h2 class="modal-title h5 fw-bold" id="editModalLabel">Edit member</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="editModalLabel">Edit member</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
           </div>
           <div class="modal-body">
             <div class="mb-3">
@@ -126,8 +142,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </form>
       </div>

@@ -73,11 +73,9 @@ h1, h2, h3, h4, .brand-logo {
 
 /* ---------- Cards ---------- */
 
-.card-brite {
-  border: 2px solid var(--partwise-ink);
-  border-radius: 0.5rem;
+/* Brite cards already have the 2px black border; add the hard shadow. */
+.card {
   box-shadow: var(--partwise-shadow);
-  background: #fff;
 }
 
 .feature-icon {
