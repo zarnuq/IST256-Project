@@ -18,21 +18,33 @@
 
   <nav class="navbar navbar-expand-lg bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand brand-logo" href="index.html"><i class="bi bi-cpu-fill" aria-hidden="true"></i>Partwise</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand brand-logo" href="index.html"><i class="bi bi-cpu-fill"></i>Partwise</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
-          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true" tabindex="-1" href="#">Shop <span class="badge text-bg-light border soon">Soon</span></a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true" tabindex="-1" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a></li>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="members.html">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Shop <span class="badge text-bg-light border soon">Soon</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a>
+          </li>
         </ul>
-        <div class="d-flex align-items-center gap-2">
-          <a class="btn btn-outline-dark disabled" aria-disabled="true" tabindex="-1" href="#" aria-label="Cart (coming soon)"><i class="bi bi-cart3"></i></a>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-dark disabled" href="#" aria-label="Cart (coming soon)"><i class="bi bi-cart3"></i></a>
           <a class="btn btn-primary" href="signup.html">Join now</a>
         </div>
       </div>
@@ -56,12 +68,14 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="card-brite p-3">
-              <!-- Placeholder: the Three.js build viewer will be mounted in this div in a later lab -->
-              <div class="build-slot" id="build-preview-slot">
-                <i class="bi bi-pc-display-horizontal" aria-hidden="true"></i>
-                <h2 class="h5 mt-2 mb-1">3D build preview</h2>
-                <p class="mb-0 text-body-secondary">Coming soon: rotate your case, swap colors, add a GPU.</p>
+            <div class="card">
+              <div class="card-body">
+                <!-- Placeholder: the Three.js build viewer will be mounted in this div in a later lab -->
+                <div class="build-slot" id="build-preview-slot">
+                  <i class="bi bi-pc-display-horizontal"></i>
+                  <h2 class="h5 mt-2 mb-1">3D build preview</h2>
+                  <p class="mb-0 text-body-secondary">Coming soon: rotate your case, swap colors, add a GPU.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -79,35 +93,43 @@
 
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
-            <div class="card-brite h-100 p-4">
-              <span class="feature-icon mb-3"><i class="bi bi-person-plus-fill" aria-hidden="true"></i></span>
-              <h3 class="h5">Member accounts</h3>
-              <p class="mb-3">Sign up, update your details, and keep your info in one place.</p>
-              <a href="signup.html" class="btn btn-primary btn-sm mt-auto align-self-start">Sign up</a>
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column p-4">
+                <span class="feature-icon mb-3"><i class="bi bi-person-plus-fill"></i></span>
+                <h3 class="card-title h5">Member accounts</h3>
+                <p class="card-text">Sign up, update your details, and keep your info in one place.</p>
+                <a href="signup.html" class="btn btn-primary btn-sm mt-auto align-self-start">Sign up</a>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="card-brite h-100 p-4">
-              <span class="feature-icon mb-3"><i class="bi bi-motherboard-fill" aria-hidden="true"></i></span>
-              <h3 class="h5">Browse parts</h3>
-              <p class="mb-2">Cases, GPUs, CPUs, RAM, storage, power and cooling in one catalog.</p>
-              <span class="badge text-bg-light border align-self-start mt-auto">Coming soon</span>
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column p-4">
+                <span class="feature-icon mb-3"><i class="bi bi-motherboard-fill"></i></span>
+                <h3 class="card-title h5">Browse parts</h3>
+                <p class="card-text">Cases, GPUs, CPUs, RAM, storage, power and cooling in one catalog.</p>
+                <span class="badge text-bg-light border align-self-start mt-auto">Coming soon</span>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="card-brite h-100 p-4">
-              <span class="feature-icon mb-3"><i class="bi bi-box-fill" aria-hidden="true"></i></span>
-              <h3 class="h5">Live 3D preview</h3>
-              <p class="mb-2">See your case color, GPU and fan lighting update as you choose parts.</p>
-              <span class="badge text-bg-light border align-self-start mt-auto">Coming soon</span>
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column p-4">
+                <span class="feature-icon mb-3"><i class="bi bi-box-fill"></i></span>
+                <h3 class="card-title h5">Live 3D preview</h3>
+                <p class="card-text">See your case color, GPU and fan lighting update as you choose parts.</p>
+                <span class="badge text-bg-light border align-self-start mt-auto">Coming soon</span>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="card-brite h-100 p-4">
-              <span class="feature-icon mb-3"><i class="bi bi-cart-check-fill" aria-hidden="true"></i></span>
-              <h3 class="h5">Cart &amp; returns</h3>
-              <p class="mb-2">Check out a whole build at once, with easy returns if a part is wrong.</p>
-              <span class="badge text-bg-light border align-self-start mt-auto">Coming soon</span>
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column p-4">
+                <span class="feature-icon mb-3"><i class="bi bi-cart-check-fill"></i></span>
+                <h3 class="card-title h5">Cart &amp; returns</h3>
+                <p class="card-text">Check out a whole build at once, with easy returns if a part is wrong.</p>
+                <span class="badge text-bg-light border align-self-start mt-auto">Coming soon</span>
+              </div>
             </div>
           </div>
         </div>
@@ -117,10 +139,12 @@
     <!-- Call to action -->
     <section class="pb-5">
       <div class="container">
-        <div class="card-brite p-4 p-md-5 text-center">
-          <h2 class="fw-bold mb-2">Ready to start your build?</h2>
-          <p class="mb-4">Create your free member account in under a minute.</p>
-          <a href="signup.html" class="btn btn-primary btn-lg">Join Partwise</a>
+        <div class="card">
+          <div class="card-body p-4 p-md-5 text-center">
+            <h2 class="card-title fw-bold mb-2">Ready to start your build?</h2>
+            <p class="card-text mb-4">Create your free member account in under a minute.</p>
+            <a href="signup.html" class="btn btn-primary btn-lg">Join Partwise</a>
+          </div>
         </div>
       </div>
     </section>

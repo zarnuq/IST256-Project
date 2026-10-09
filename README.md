@@ -7,9 +7,9 @@ A store for PC parts for any kind of build (home, office, school, creative, gami
 **Now:** L06 (User/Member Management), due **Sun Oct 11**. The files in this folder are stubs with `TODO` comments;
 `reference/` is the finished goal. Tasks are in [`TODO.md`](TODO.md), one group per person.
 
->[!IMPORTANT]
->This is the bootstrap link: [https://bootswatch.com/brite/](https://bootswatch.com/brite/), so if you are adding a new element, check here first where you can copy specific code blocks to match styling.
->Also, please read the  [`README.md`](README.md) AND the [`TODO.md`](TODO.md) and assign yourself a task.
+> [!IMPORTANT]
+> This is the bootstrap link: [https://bootswatch.com/brite/](https://bootswatch.com/brite/), so if you are adding a new element, check here first where you can copy specific code blocks to match styling.
+> Also, please read the [`README.md`](README.md) AND the [`TODO.md`](TODO.md) and assign yourself a task.
 
 ## How to do:
 
@@ -23,86 +23,84 @@ A store for PC parts for any kind of build (home, office, school, creative, gami
 
 ## Run it
 
-Open `reference/index.html` to see the finished site. Use VS Code's *Live Server* while building. Needs internet for the CDNs.
-`reference-full/` is a backup of the original, bigger version of the site.
+Just open `index.html` in a browser (no install needed). In VS Code you can also use the _Live Server_ extension.
+Needs an internet connection for the Bootstrap, icon and font CDNs.
 
 ## Files
 
-| File | What it does |
-|---|---|
-| `index.html` | Homepage |
-| `signup.html` | Sign-up form |
-| `members.html` | Member table, search, edit pop-up, delete, download |
-| `css/styles.css` | Custom styles on top of the Brite theme |
-| `js/validate.js` | Reads a form, checks each field, shows errors |
-| `js/storage.js` | The only file that reads/writes member data |
-| `js/signup.js`, `js/members.js` | Page logic |
+```
+index.html        Homepage (hero, feature cards, nav, footer)
+signup.html       Sign-up form + validation messages
+members.html      Member table, search, edit modal, delete, JSON download/import, raw JSON view
+css/styles.css    Custom styling on top of Brite
+js/validate.js    Validation rules + helpers that show errors on a form
+js/storage.js     UserStore: the only file that reads/writes member data (localStorage as JSON)
+js/signup.js      Sign-up form logic
+js/members.js     Members page logic (render, edit, delete, import/export)
+data/users.sample.json   Example of the data format (import it on the members page to get demo members)
+```
 
-## Data
+## How the JSON storage works
 
-Members are stored as JSON in `localStorage` (key `partwise.users`) and downloaded as `users.json`, because browser
-JS cannot write files. Each browser has its own data.
+Browser JavaScript cannot write files by itself, so members are saved as JSON in the browser (`localStorage`).
+On the members page:
+
+- **Download users.json** saves a real `users.json` file (use this for the "JSON file" screenshot).
+- **Import JSON** loads a file like `data/users.sample.json` back in (duplicates and invalid rows are skipped).
+- The **Stored data** box shows exactly what the JSON contains.
+
+Note: localStorage is per browser, so each teammate sees only their own test data. Export/import to share.
+
+Each member looks like this:
 
 ```json
-{ "id": "…", "fullName": "…", "email": "…", "phone": "…", "age": 21,
-  "address": "…", "role": "customer", "createdAt": "…", "updatedAt": "…" }
+{
+    "id": "…",
+    "fullName": "…",
+    "email": "…",
+    "phone": "…",
+    "age": 21,
+    "address": "…",
+    "role": "customer",
+    "createdAt": "…",
+    "updatedAt": "…"
+}
 ```
 
-Email is stored lower-case, age as a number, role is `customer` or `admin`.
+## Validation rules
 
-| Field | Rule |
-|---|---|
-| Full name | required, 2 to 60 characters, letters / spaces / `-` / `'` / `.` |
-| Email | required, valid format, unique (not case sensitive) |
-| Age | required, whole number 13 to 120 |
-| Phone | optional; if filled, 10 to 15 digits |
-| Address | required, 5 to 120 characters |
+| Field     | Rule                                                                             |
+| --------- | -------------------------------------------------------------------------------- |
+| Full name | required, 2 to 60 characters, letters / spaces / hyphens / apostrophes / periods |
+| Email     | required, valid format, must be unique (not case sensitive)                      |
+| Age       | required, whole number 13 to 120                                                 |
+| Phone     | optional; if filled, 10 to 15 digits                                             |
+| Address   | required, 5 to 120 characters                                                    |
 
-## Shared functions (keep these names so files work together)
+## Screenshots to take for the PDF (full screen, no split screen)
 
-```
-validate.js   FIELDS                    the five field names
-              readForm(form)            -> { fullName, email, age, phone, address }
-              validateMember(data)      -> { field: message } (empty object = valid)
-              showErrors(form, errors)  marks bad fields red with their message
+1. **Homepage** (`index.html`)
+2. **Sign-up page showing validation**: click "Create account" with the form empty (or type a bad email and age), so the red error messages show
+3. **users.json**: click "Download users.json", open the file in VS Code, screenshot it
+4. Optional extras: members table, the edit modal, a successful sign-up message
+5. Code screenshots (or submit the zipped project)
 
-storage.js    getMembers()              -> array of members
-              saveMembers(members)
-              emailTaken(email, ignoreId) -> true / false
-              addMember(data)           -> the new member
-              updateMember(id, data)
-              deleteMember(id)
-              downloadMembers()         saves users.json
-```
+## Suggested task split (L06)
 
-## Conventions
+| Member       | Component                                                               |
+| ------------ | ----------------------------------------------------------------------- |
+| Jeremy Hou   | Project setup / Git repo, `storage.js` (JSON layer), integration        |
+| Oliver Aaron | `signup.html`, `validate.js`, `signup.js`                               |
+| Anson Poon   | `index.html`, navbar, `styles.css`, Bootstrap theming                   |
+| Aryan Vir    | `members.html` + `members.js` (table, edit, delete), input sanitization |
+| Miles Alford | PDF report, screenshots, proofreading, final submission                 |
 
-- Plain HTML + vanilla JS, no build step. Bootswatch Brite 5.3.8 (not older), Bootstrap JS 5.3.3, Bootstrap Icons 1.11.3,
-  Space Grotesk headings.
-- Scripts go at the bottom of the page in this order: Bootstrap JS, `validate.js`, `storage.js`, page script.
-- 2-space indent, single quotes, `const`/`let`, a short comment above each function.
-- **Never put user data into the page with `innerHTML`**; use `createElement` + `textContent`.
-- Forms use `novalidate`; each input is `name`d after its field and directly followed by a `.invalid-feedback` div.
-- Keep the reference element ids; the JS looks them up.
-- Navbar and footer are copied on every page from `reference/index.html`. Shop and Builder links stay disabled.
-- No passwords until we have a real backend.
+Everyone's name must be on the PDF cover page **and** in the contributions section.
 
-## L06 checklist
+## Roadmap (how this grows)
 
-1. Submit the sign-up form empty: name, email, age and address are flagged; phone is not
-2. Bad email, age 5 and a 3-digit phone: all three are flagged
-3. Valid data: success message, form clears, member shows on the Members page
-4. Same email again: rejected
-5. Edit a member: saves; invalid edits are rejected
-6. Delete a member: it disappears
-7. Download users.json: matches the Stored data box
-8. Phone width: layout still works
-9. Every navbar links to every page
-
-## Submission
-
-- Screenshots, full screen (**no split screen**): homepage, sign-up page showing validation errors, `users.json` open
-  in VS Code.
-- PDF: cover page with **all five names** (a missing name gets a zero), overview, contributions per member (what they
-  built, their code, a screenshot), screenshots, code.
-- Describe honestly who built what, and check the syllabus rules on AI tools.
+- **L07** Product management: copy the members pattern (`products.json`, `products.html`, same table + modal).
+- **L08 / L09** Cart and storefront: product grid (the Start Bootstrap _Shop Homepage_ layout is a good reference), cart saved by member `id`.
+- **L10** Billing and returns pages.
+- **L11 / L12** Replace the internals of `storage.js` with Node + MongoDB calls; pages keep using the same `UserStore` functions. Add password hashing and sign-in at that point (never store plain-text passwords in JSON).
+- **Three.js** build viewer mounts in `#build-preview-slot` on the homepage.
