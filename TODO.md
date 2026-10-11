@@ -9,13 +9,13 @@ The files in this folder are stubs: fill in every `TODO` comment by hand. `refer
 
 | Group                   | Files                                                          | Owner |
 | ----------------------- | -------------------------------------------------------------- | ----- |
-| Shared JS (first)       | `js/validate.js`, `js/storage.js`                              |       |
+| Shared JS (first)       | `js/validate.js`, `js/storage.js`                              | Aryan Vir |
 | Homepage and styles     | `index.html`, `css/styles.css`                                 |       |
 | Sign-up page            | `signup.html`, `js/signup.js`                                  |       |
-| Members table           | `members.html` and `js/members.js`, "Members table" sections   |       |
-| Members edit and delete | `members.html` and `js/members.js`, "edit and delete" sections |       |
+| Members table           | `members.html` and `js/members.js`, "Members table" sections   | Aryan Vir |
+| Members edit and delete | `members.html` and `js/members.js`, "edit and delete" sections | Aryan Vir |
 
-## Task 1: Shared JS (merge by Fri Oct 9) [YOUR NAME]
+## Task 1: Shared JS (merge by Fri Oct 9) [Aryan Vir]
 
 - [ ] `validate.js`: `readForm`, `validateMember` (rules in `README.md`), `showErrors`
 - [ ] `storage.js`: `getMembers`, `saveMembers`, `emailTaken`, `addMember`, `updateMember`, `deleteMember`, `downloadMembers`
@@ -35,14 +35,14 @@ The files in this folder are stubs: fill in every `TODO` comment by hand. `refer
 - [ ] `signup.js`: `showAlert`, submit handler, reset handler
 - [ ] Check: L06 checklist 1 to 4
 
-## Task 4: Members table [YOUR NAME]
+## Task 4: Members table [Aryan Vir]
 
 - [ ] `members.html`: head, navbar, footer, count, Add member link, `#downloadBtn`, `#searchInput`, table, JSON box, scripts
 - [ ] `members.js`: `addCell`, `makeButton`, `render`, search and download wiring
 - [ ] Check: members added on the sign-up page (yours or `reference/signup.html`) show in the table; search, download
       and the JSON box work; an address of `<b>test</b>` shows as plain text
 
-## Task 5: Members edit and delete [YOUR NAME]
+## Task 5: Members edit and delete [Aryan Vir]
 
 - [ ] `members.html`: edit modal `#editModal` with `#editForm` and the five fields
 - [ ] `members.js`: `openEdit`, `removeMember`, edit form submit handler
