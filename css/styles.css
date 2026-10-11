@@ -19,11 +19,10 @@ main {
 }
 
 h1, h2, h3, h4, .brand-logo {
-  font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   letter-spacing: -0.02em;
 }
 
-/* TODO: body as a flex column so the footer stays at the bottom; Space Grotesk for headings and .brand-logo */
+/* TODO: body as a flex column so the footer stays at the bottom */
 
 /* ---------- Navbar ---------- */
 /* TODO: .brand-logo and its icon, lime underline on the active link, small .soon badge */
