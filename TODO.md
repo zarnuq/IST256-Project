@@ -22,14 +22,14 @@ The files in this folder are stubs: fill in every `TODO` comment by hand. `refer
 - [ ] Check: in the browser console, `addMember(...)`, `getMembers()`, `updateMember`, `deleteMember` and
       `validateMember(...)` all work, and data survives a reload
 
-## Task 2: Homepage and styles [Miles Alford]
+## Task 2: Homepage and styles [Jeremy Hou & Miles Alford]
 
 - [X] `index.html`: head links, navbar, hero with `#build-preview-slot`, four feature cards, call to action, footer
 - [ ] Wording for any kind of build, not gaming-only
 - [ ] `styles.css`: every section in the stub
 - [ ] Check: the homepage looks like `reference/index.html` at desktop and phone width
 
-## Task 3: Sign-up page [Miles Alford]
+## Task 3: Sign-up page [Anson Poon & Miles Alford]
 
 - [ ] `signup.html`: head, navbar, footer, `#formAlert`, `#signupForm` with the five fields, rules card, scripts
 - [ ] `signup.js`: `showAlert`, submit handler, reset handler
