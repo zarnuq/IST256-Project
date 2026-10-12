@@ -1,17 +1,37 @@
 // signup.js: validates the sign-up form and saves the new member.
-// Group: Sign-up page. Uses validate.js and storage.js. Goal: reference/js/signup.js
-
-// TODO: get #signupForm and #formAlert with document.getElementById
+// Uses validate.js and storage.js.
+const signupForm = document.getElementById('signupForm');
+const formAlert = document.getElementById('formAlert');
 
 // Shows a Bootstrap alert above the form (type is 'success' or 'danger').
 function showAlert(type, message) {
-  // TODO: set the alert's className to 'alert alert-' + type and its textContent to message
+  formAlert.className = 'alert alert-' + type;
+  formAlert.textContent = message;
 }
 
-// TODO: when the form is submitted:
-//   - stop the page from reloading (event.preventDefault())
-//   - readForm, then validateMember; if emailTaken, add an email error too
-//   - showErrors; if there are errors, show a 'danger' alert and stop
-//   - otherwise addMember, reset the form and show a 'success' welcome alert
+// Validates the submitted fields and saves the member when there are no errors.
+signupForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const data = readForm(signupForm);
+  const errors = validateMember(data);
+  if (emailTaken(data.email)) {
+    errors.email = 'That email is already registered.';
+  }
 
-// TODO: when the form is reset (Clear button), clear the errors and the alert
+  showErrors(signupForm, errors);
+  if (Object.keys(errors).length > 0) {
+    showAlert('danger', 'Please fix the highlighted fields.');
+    return;
+  }
+
+  const member = addMember(data);
+  signupForm.reset();
+  showAlert('success', 'Welcome, ' + member.fullName + '! Your account was created.');
+});
+
+// Clears validation errors and the alert when the form is reset.
+signupForm.addEventListener('reset', function () {
+  showErrors(signupForm, {});
+  formAlert.className = '';
+  formAlert.textContent = '';
+});

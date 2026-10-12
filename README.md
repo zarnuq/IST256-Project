@@ -18,6 +18,9 @@ A store for PC parts for any kind of build (home, office, school, creative, gami
 3. Commit small and often; `git pull` before each session.
 4. Push and open a pull request for Jeremy or Miles to merge: `git add . && git commit -m "your commit message" && git push -u origin HEAD`
 
+>[!IMPORTANT]
+>MAKE SURE TO `git pull origin main` from remote to sync your branch BEFORE YOU START WORKING EVERY TIME
+
 ## Run it
 
 Just open `index.html` in a browser (no install needed). In VS Code you can also use the _Live Server_ extension.
@@ -81,18 +84,6 @@ Each member looks like this:
 3. **users.json**: click "Download users.json", open the file in VS Code, screenshot it
 4. Optional extras: members table, the edit modal, a successful sign-up message
 5. Code screenshots (or submit the zipped project)
-
-## Suggested task split (L06)
-
-| Member       | Component                                                               |
-| ------------ | ----------------------------------------------------------------------- |
-| Jeremy Hou   | Project setup / Git repo, `storage.js` (JSON layer), integration        |
-| Oliver Aaron | `signup.html`, `validate.js`, `signup.js`                               |
-| Anson Poon   | `index.html`, navbar, `styles.css`, Bootstrap theming                   |
-| Aryan Vir    | `members.html` + `members.js` (table, edit, delete), input sanitization |
-| Miles Alford | PDF report, screenshots, proofreading, final submission                 |
-
-Everyone's name must be on the PDF cover page **and** in the contributions section.
 
 ## Roadmap (how this grows)
 

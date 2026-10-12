@@ -1,7 +1,5 @@
 // signup.js: validates the sign-up form and saves the new member.
 
-const signupForm = document.getElementById('signupForm');
-const formAlert = document.getElementById('formAlert');
 
 // Shows a Bootstrap alert above the form (type is 'success' or 'danger').
 function showAlert(type, message) {

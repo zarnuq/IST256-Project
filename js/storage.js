@@ -1,42 +1,67 @@
 // storage.js: the only file that reads or writes member data.
-// Group: Shared JS (build this first). Goal: reference/js/storage.js
+// Members are saved as JSON in the browser's localStorage, and can be downloaded as users.json.
 
 const STORAGE_KEY = 'partwise.users';
 
 // Returns the saved members array (empty if nothing is saved yet).
 function getMembers() {
-  // TODO: read STORAGE_KEY from localStorage, JSON.parse it, and return [] if nothing is saved
+  return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 }
 
 // Saves the whole members array as JSON.
 function saveMembers(members) {
-  // TODO: JSON.stringify the array and store it in localStorage under STORAGE_KEY
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(members));
 }
 
 // True if a member other than ignoreId already uses this email.
 function emailTaken(email, ignoreId) {
-  // TODO: return true if any saved member has this email and a different id
+  return getMembers().some(function (member) {
+    return member.email === email && member.id !== ignoreId;
+  });
 }
 
 // Saves a new member from form data and returns it.
 function addMember(data) {
-  // TODO: build a member: id (String(Date.now())), the five fields (age as a Number),
-  //       role 'customer', createdAt and updatedAt (new Date().toISOString())
-  // TODO: add it to the saved array, save, and return it
+  const members = getMembers();
+  const now = new Date().toISOString();
+  const member = {
+    id: String(Date.now()),
+    fullName: data.fullName,
+    email: data.email,
+    phone: data.phone,
+    age: Number(data.age),
+    address: data.address,
+    role: 'customer',
+    createdAt: now,
+    updatedAt: now
+  };
+  members.push(member);
+  saveMembers(members);
+  return member;
 }
 
 // Replaces an existing member's details with new form data.
 function updateMember(id, data) {
-  // TODO: find the member with this id, copy in the five fields (age as a Number), refresh updatedAt, save
+  const members = getMembers();
+  const member = members.find(function (m) { return m.id === id; });
+  FIELDS.forEach(function (name) {
+    member[name] = data[name];
+  });
+  member.age = Number(data.age);
+  member.updatedAt = new Date().toISOString();
+  saveMembers(members);
 }
 
 // Removes the member with this id.
 function deleteMember(id) {
-  // TODO: save the array without the member that has this id
+  saveMembers(getMembers().filter(function (m) { return m.id !== id; }));
 }
 
 // Downloads all members as a users.json file.
 function downloadMembers() {
-  // TODO: make a Blob of JSON.stringify(getMembers(), null, 2) with type 'application/json'
-  // TODO: create an <a>, set href = URL.createObjectURL(blob) and download = 'users.json', then click() it
+  const blob = new Blob([JSON.stringify(getMembers(), null, 2)], { type: 'application/json' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'users.json';
+  link.click();
 }
