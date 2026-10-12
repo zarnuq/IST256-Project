@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <nav class="navbar navbar-expand-lg bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand brand-logo" href="index.html"><i class="bi bi-cpu-fill"></i>Partwise</a>
+      <a class="navbar-brand" href="index.html"><i class="bi bi-cpu-fill me-1"></i>Partwise</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,24 +31,24 @@
             <a class="nav-link" href="members.html">Members</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Shop <span class="badge text-bg-light border soon">Soon</span></a>
+            <a class="nav-link" href="#">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a>
+            <a class="nav-link" href="#">Builder</a>
           </li>
         </ul>
         <div class="d-flex gap-2">
-          <a class="btn btn-outline-dark disabled" href="#" aria-label="Cart (coming soon)"><i class="bi bi-cart3"></i></a>
+          <a class="btn btn-outline-dark" href="#" aria-label="Cart"><i class="bi bi-cart3"></i></a>
           <a class="btn btn-primary" href="signup.html">Join now</a>
         </div>
       </div>
     </div>
   </nav>
-  <main class="py-5">
+  <main class="flex-grow-1 py-5">
     <div class="container">
       <div class="mb-4">
         <h1 class="fw-bold mb-1">Create your account</h1>
-        <p class="text-body-secondary mb-0">Join Partwise to save builds and check out parts later. Fields marked * are required.</p>
+        <p class="mb-0">Join Partwise to save builds and check out parts. Fields marked * are required.</p>
       </div>
 
       <div class="row g-4">
@@ -83,7 +83,7 @@
                     <div class="invalid-feedback"></div>
                   </div>
                   <div class="col-sm-8 mb-3">
-                    <label for="phone" class="form-label">Phone <span class="text-body-secondary fw-normal">(optional)</span></label>
+                    <label for="phone" class="form-label">Phone <span class="fw-normal">(optional)</span></label>
                     <input type="tel" class="form-control" id="phone" name="phone"
                            placeholder="(111) 111-1111" autocomplete="tel" maxlength="25">
                     <div class="invalid-feedback"></div>
@@ -95,7 +95,6 @@
                   <input type="text" class="form-control" id="address" name="address"
                          placeholder="Westgate Building, University Park, PA 16802" autocomplete="street-address" maxlength="140" required>
                   <div class="invalid-feedback"></div>
-                  <small class="form-text text-muted">Used later for shipping your parts.</small>
                 </div>
 
                 <div class="d-flex flex-wrap gap-2">

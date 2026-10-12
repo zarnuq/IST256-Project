@@ -31,8 +31,8 @@ Needs an internet connection for the Bootstrap, icon and font CDNs.
 ```
 index.html        Homepage (hero, feature cards, nav, footer)
 signup.html       Sign-up form + validation messages
-members.html      Member table, search, edit modal, delete, JSON download/import, raw JSON view
-css/styles.css    Custom styling on top of Brite
+members.html      Member table, search, edit modal, delete, JSON download/import
+css/styles.css    Card shadow on top of Brite
 js/validate.js    Validation rules + helpers that show errors on a form
 js/storage.js     UserStore: the only file that reads/writes member data (localStorage as JSON)
 js/signup.js      Sign-up form logic
@@ -47,8 +47,6 @@ On the members page:
 
 - **Download users.json** saves a real `users.json` file (use this for the "JSON file" screenshot).
 - **Import JSON** loads a file like `data/users.sample.json` back in (duplicates and invalid rows are skipped).
-- The **Stored data** box shows exactly what the JSON contains.
-
 Note: localStorage is per browser, so each teammate sees only their own test data. Export/import to share.
 
 Each member looks like this:
