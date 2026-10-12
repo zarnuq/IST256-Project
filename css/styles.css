@@ -2,26 +2,150 @@
 /* Group: Homepage and styles. Goal: reference/css/styles.css */
 
 /* TODO: :root colors: --partwise-lime (#a2e436), --partwise-ink (#000), --partwise-shadow (4px 4px 0 ink) */
+:root {
+  --partwise-lime: #a2e436;
+  --partwise-ink: #000;
+  --partwise-shadow: 4px 4px 0 var(--partwise-ink);
+}
 
-/* TODO: body as a flex column so the footer stays at the bottom; Space Grotesk for headings and .brand-logo */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, .brand-logo {
+  letter-spacing: -0.02em;
+}
+
+/* TODO: body as a flex column so the footer stays at the bottom */
 
 /* ---------- Navbar ---------- */
 /* TODO: .brand-logo and its icon, lime underline on the active link, small .soon badge */
 
+.brand-logo {
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.brand-logo .bi {
+  background: var(--partwise-lime);
+  border: 2px solid var(--partwise-ink);
+  border-radius: 0.375rem;
+  padding: 0.1rem 0.35rem;
+  margin-right: 0.35rem;
+}
+
+.navbar .nav-link.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: var(--partwise-lime);
+}
+
+.soon {
+  font-size: 0.65rem;
+  vertical-align: middle;
+}
+
 /* ---------- Hero ---------- */
 /* TODO: .hero lime background with a bottom border, big h1, .marker highlight, narrower .lead */
 
+.hero {
+  background: var(--partwise-lime);
+  border-bottom: 2px solid var(--partwise-ink);
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.marker {
+  background: linear-gradient(transparent 58%, #fff 58%);
+  padding: 0 0.15em;
+}
+
+.hero .lead {
+  max-width: 34rem;
+}
 /* ---------- Cards ---------- */
 /* TODO: .card-brite (2px black border, rounded, hard shadow, white) and .feature-icon */
+.card {
+  box-shadow: var(--partwise-shadow);
+}
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: var(--partwise-lime);
+  border: 2px solid var(--partwise-ink);
+  border-radius: 0.5rem;
+}
+.build-slot .bi {
+  font-size: 3rem;
+}
 
 /* ---------- Build preview placeholder ---------- */
 /* TODO: .build-slot dashed box with a grid background, centered content, big icon */
+.build-slot {
+  aspect-ratio: 4 / 3;
+  border: 2px dashed var(--partwise-ink);
+  border-radius: 0.5rem;
+  background-color: #fafafa;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
 
 /* ---------- Forms ---------- */
 /* TODO: focus style for .form-control and bold .form-label */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--partwise-ink);
+  box-shadow: 3px 3px 0 var(--partwise-lime);
+}
 
+.form-label {
+  font-weight: 600;
+}
 /* ---------- Members page ---------- */
 /* TODO: .json-preview dark box with lime text that scrolls */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--partwise-ink);
+  box-shadow: 3px 3px 0 var(--partwise-lime);
+}
 
+.form-label {
+  font-weight: 600;
+}
 /* ---------- Footer ---------- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--partwise-ink);
+  box-shadow: 3px 3px 0 var(--partwise-lime);
+}
+
+.form-label {
+  font-weight: 600;
+}
 /* TODO: .site-footer black with white text and lime links */

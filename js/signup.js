@@ -1,17 +1,15 @@
 // signup.js: validates the sign-up form and saves the new member.
+// Uses validate.js and storage.js.
 const signupForm = document.getElementById('signupForm');
 const formAlert = document.getElementById('formAlert');
-// Group: Sign-up page. Uses validate.js and storage.js. Goal: reference/js/signup.js
 
+// Shows a Bootstrap alert above the form (type is 'success' or 'danger').
 function showAlert(type, message) {
   formAlert.className = 'alert alert-' + type;
   formAlert.textContent = message;
+}
 
-// TODO:
-//   stop the page from reloading
-//   Read Form
-//   Show errors
-//   Otherwise addMember, reset the form and show a 'success' welcome alert
+// Validates the submitted fields and saves the member when there are no errors.
 signupForm.addEventListener('submit', function (event) {
   event.preventDefault();
   const data = readForm(signupForm);
@@ -30,7 +28,8 @@ signupForm.addEventListener('submit', function (event) {
   signupForm.reset();
   showAlert('success', 'Welcome, ' + member.fullName + '! Your account was created.');
 });
-// TODO: when the form is reset (Clear button), clear the errors and the alert
+
+// Clears validation errors and the alert when the form is reset.
 signupForm.addEventListener('reset', function () {
   showErrors(signupForm, {});
   formAlert.className = '';

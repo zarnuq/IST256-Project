@@ -85,18 +85,6 @@ Each member looks like this:
 4. Optional extras: members table, the edit modal, a successful sign-up message
 5. Code screenshots (or submit the zipped project)
 
-## Suggested task split (L06)
-
-| Member       | Component                                                               |
-| ------------ | ----------------------------------------------------------------------- |
-| Jeremy Hou   | Project setup / Git repo, `storage.js` (JSON layer), integration        |
-| Oliver Aaron | `signup.html`, `validate.js`, `signup.js`                               |
-| Anson Poon   | `index.html`, navbar, `styles.css`, Bootstrap theming                   |
-| Aryan Vir    | `members.html` + `members.js` (table, edit, delete), input sanitization |
-| Miles Alford | PDF report, screenshots, proofreading, final submission                 |
-
-Everyone's name must be on the PDF cover page **and** in the contributions section.
-
 ## Roadmap (how this grows)
 
 - **L07** Product management: copy the members pattern (`products.json`, `products.html`, same table + modal).
