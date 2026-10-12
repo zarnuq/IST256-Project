@@ -151,18 +151,6 @@ h3,
 }
 /* ---------- Members page ---------- */
 
-.json-preview {
-    background: #111;
-    color: var(--partwise-lime);
-    border: 2px solid var(--partwise-ink);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    max-height: 22rem;
-    overflow: auto;
-    font-size: 0.85rem;
-    margin: 0;
-}
-
 .form-label {
   font-weight: 600;
 }

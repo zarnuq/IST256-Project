@@ -4,7 +4,6 @@
 
 const memberRows = document.getElementById('memberRows');
 const memberCount = document.getElementById('memberCount');
-const jsonPreview = document.getElementById('jsonPreview');
 const searchInput = document.getElementById('searchInput');
 
 // Adds a cell with plain text (textContent, never innerHTML, so typed HTML can't run).
@@ -24,7 +23,7 @@ function makeButton(label, style, onClick) {
   return button;
 }
 
-// Redraws the table, the member count and the JSON box.
+// Redraws the table and the member count.
 function render() {
   const members = getMembers();
   const search = searchInput.value.toLowerCase();
@@ -33,7 +32,6 @@ function render() {
   });
 
   memberCount.textContent = members.length;
-  jsonPreview.textContent = JSON.stringify(members, null, 2);
   memberRows.textContent = '';
 
   if (shown.length === 0) {
