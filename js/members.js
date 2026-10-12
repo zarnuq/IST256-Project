@@ -1,6 +1,4 @@
 // members.js: shows the members table, with search, edit, delete and download.
-// Uses validate.js and storage.js.
-// Two groups share this file: only edit your own section.
 
 // ===== Members table group =====
 

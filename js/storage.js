@@ -1,5 +1,4 @@
 // storage.js: the only file that reads or writes member data.
-// Members are saved as JSON in the browser's localStorage, and can be downloaded as users.json.
 
 const STORAGE_KEY = 'partwise.users';
 

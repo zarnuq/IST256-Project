@@ -1,5 +1,4 @@
 // signup.js: validates the sign-up form and saves the new member.
-// Uses validate.js and storage.js.
 const signupForm = document.getElementById('signupForm');
 const formAlert = document.getElementById('formAlert');
 
