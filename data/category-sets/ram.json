@@ -1,0 +1,90 @@
+[
+  {
+    "id": "CMH32GX5M2B6000C30",
+    "description": "Corsair VENGEANCE RGB 32 GB DDR5-6000 CL30",
+    "category": "RAM",
+    "unit": "Kit",
+    "price": 559.99,
+    "additionalInfo": "Two 16 GB modules; black; Intel XMP support",
+    "sourceUrl": "https://www.corsair.com/us/en/p/memory/cmh32gx5m2b6000c30/vengeance-rgb-32gb-2x16gb-ddr5-dram-6000mt-s-c30-memory-kit-black-cmh32gx5m2b6000c30",
+    "image": "assets/images/products/corsair-vengeance-rgb-32gb.webp",
+    "imageAlt": "Corsair VENGEANCE RGB 32 GB DDR5-6000 CL30",
+    "currency": "USD",
+    "priceCheckedAt": "2026-10-16",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/2up/VENGEANCE_RGB_DDR5_BLK_01.webp",
+    "gallery": [
+      "assets/images/products/corsair-vengeance-rgb-32gb.webp",
+      "assets/images/products/corsair-vengeance-rgb-32gb-alt.webp"
+    ]
+  },
+  {
+    "id": "CC-9011200-WW",
+    "description": "Corsair 4000D AIRFLOW ATX Mid-Tower Case",
+    "category": "Case",
+    "unit": "Each",
+    "price": 74.99,
+    "additionalInfo": "Black; glass side panel; includes two 120 mm fans",
+    "sourceUrl": "https://www.corsair.com/us/en/p/pc-cases/cc-9011200-ww/4000d-airflow-tempered-glass-mid-tower-atx-case-black-cc-9011200-ww",
+    "image": "assets/images/products/corsair-4000d-airflow.webp",
+    "imageAlt": "Corsair 4000D AIRFLOW ATX Mid-Tower Case",
+    "currency": "USD",
+    "priceCheckedAt": "2026-10-16",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/base-4000d-airflow-config/Gallery/4000D_AF_BLACK_01.webp",
+    "gallery": [
+      "assets/images/products/corsair-4000d-airflow.webp"
+    ]
+  },
+  {
+    "id": "CSSD-F1000GBMP600ECS",
+    "description": "Corsair MP600 ELITE 1 TB SSD for PS5",
+    "category": "Storage",
+    "unit": "Each",
+    "price": 304.99,
+    "additionalInfo": "M.2 NVMe; PCIe 4.0 x4; includes heatsink",
+    "sourceUrl": "https://www.corsair.com/us/en/p/data-storage/cssd-f1000gbmp600ecs/mp600-elite-1tb-pcie-gen4-x4-nvme-1-4-m-2-ssd-for-ps5-cssd-f1000gbmp600ecs",
+    "image": "assets/images/products/corsair-mp600-elite-1tb.webp",
+    "imageAlt": "Corsair MP600 ELITE 1 TB SSD for PS5",
+    "currency": "USD",
+    "priceCheckedAt": "2026-10-16",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Storage/mp600-elite/CSSD-F1000GBMP600ECS/Gallery/MP600_ELITE_for_PS5_01.webp",
+    "gallery": [
+      "assets/images/products/corsair-mp600-elite-1tb.webp"
+    ]
+  },
+  {
+    "id": "CP-9020295-NA",
+    "description": "Corsair RM750e 750 W Power Supply",
+    "category": "Power Supply",
+    "unit": "Each",
+    "price": 89.99,
+    "additionalInfo": "Fully modular; ATX 3.1; PCIe 5.1 support",
+    "sourceUrl": "https://www.corsair.com/us/en/p/psu/cp-9020295-na/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020295-na",
+    "image": "assets/images/products/corsair-rm750e.webp",
+    "imageAlt": "Corsair RM750e 750 W Power Supply",
+    "currency": "USD",
+    "priceCheckedAt": "2026-10-16",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020295-NA_01.webp",
+    "gallery": [
+      "assets/images/products/corsair-rm750e.webp",
+      "assets/images/products/corsair-rm750e-alt.webp"
+    ]
+  },
+  {
+    "id": "CC-8900456",
+    "description": "Corsair 4000D Replacement 120 mm Fan",
+    "category": "Cooling",
+    "unit": "Each",
+    "price": 9.99,
+    "additionalInfo": "Black; three-pin connector; replacement for 4000D series",
+    "sourceUrl": "https://www.corsair.com/us/en/p/pc-components-accessories/cc-8900456/4000d-4000d-airflow-120mm-3-pin-fan-black-1200-rpm-cc-8900456",
+    "image": "assets/images/products/corsair-4000d-fan.webp",
+    "imageAlt": "Corsair 4000D Replacement 120 mm Fan",
+    "currency": "USD",
+    "priceCheckedAt": "2026-10-16",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Accessories-Parts/CC-8900456/Gallery/CC-8900456_11472.webp",
+    "gallery": [
+      "assets/images/products/corsair-4000d-fan.webp"
+    ]
+  }
+]
+

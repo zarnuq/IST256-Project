@@ -1,0 +1,53 @@
+[
+  {
+    "id": "CO-9051053-WW",
+    "description": "iCUE LINK LX120-R RGB 120mm PWM Reverse Fan Expansion - White",
+    "category": "Cooling",
+    "unit": "Each",
+    "price": 44.99,
+    "currency": "USD",
+    "additionalInfo": "CORSAIR standalone white 120mm reverse-airflow RGB PWM case-fan expansion; current price shown on product page. SKU CO-9051053-WW.",
+    "sourceUrl": "https://www.corsair.com/us/en/p/case-fans/co-9051053-ww/icue-link-lx120-r-rgb-120mm-pwm-reverse-fan-expansion-white-co-9051053-ww",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/icue-link-lx-r-rgb/Gallery/CO-9051053-WW/CO-9051053-WW_01.webp",
+    "image": "assets/images/products/cooling/co-9051053-ww.avif",
+    "imageAlt": "iCUE LINK LX120-R RGB 120mm PWM Reverse Fan Expansion - White",
+    "gallery": [
+      "assets/images/products/cooling/co-9051053-ww.avif"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "CO-9051001-WW",
+    "description": "iCUE LINK QX120 RGB 120mm PWM PC Fan Expansion Kit",
+    "category": "Cooling",
+    "unit": "Each",
+    "price": 54.99,
+    "currency": "USD",
+    "additionalInfo": "CORSAIR standalone 120mm RGB PWM case-fan expansion kit; current price shown on product page. SKU CO-9051001-WW.",
+    "sourceUrl": "https://www.corsair.com/us/en/p/case-fans/co-9051001-ww/icue-link-qx120-rgb-120mm-pwm-pc-fan-expansion-kit-co-9051001-ww",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/CO-9051001-WW/gallery/QX120_RGB_RENDER_01.webp",
+    "image": "assets/images/products/cooling/co-9051001-ww.avif",
+    "imageAlt": "iCUE LINK QX120 RGB 120mm PWM PC Fan Expansion Kit",
+    "gallery": [
+      "assets/images/products/cooling/co-9051001-ww.avif"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "CO-9051021-WW",
+    "description": "iCUE LINK RX120 RGB 120mm PWM Single Fan Expansion - White",
+    "category": "Cooling",
+    "unit": "Each",
+    "price": 34.99,
+    "currency": "USD",
+    "additionalInfo": "CORSAIR standalone white 120mm RGB PWM single case-fan expansion; current price shown on product page. SKU CO-9051021-WW.",
+    "sourceUrl": "https://www.corsair.com/us/en/p/case-fans/co-9051021-ww/icue-link-rx120-rgb-120mm-pwm-single-fan-expansion-white-co-9051021-ww",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/rx-series/CO-9051021-WW/Gallery/RX120_RGB_WHITE_RENDER_01.webp",
+    "image": "assets/images/products/cooling/co-9051021-ww.avif",
+    "imageAlt": "iCUE LINK RX120 RGB 120mm PWM Single Fan Expansion - White",
+    "gallery": [
+      "assets/images/products/cooling/co-9051021-ww.avif"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  }
+]

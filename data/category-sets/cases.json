@@ -1,0 +1,53 @@
+[
+  {
+    "id": "CC-9011322-WW",
+    "description": "CORSAIR 3500X RS-R ARGB Tempered Glass ATX Mid-Tower PC Case - Black",
+    "category": "Cases",
+    "unit": "Each",
+    "price": 119.99,
+    "currency": "USD",
+    "additionalInfo": "Black; ATX mid-tower; glass panels; includes three reverse-rotor ARGB fans",
+    "sourceUrl": "https://www.corsair.com/us/en/p/pc-cases/cc-9011322-ww/3500x-rs-r-argb-mid-tower-pc-case-cc-9011322-ww",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/3500x/gallery/CC-9011322-WW/CC-9011322-WW_01.webp",
+    "image": "assets/images/products/cases/cc-9011322-ww.avif",
+    "imageAlt": "CORSAIR 3500X RS-R ARGB Tempered Glass ATX Mid-Tower PC Case - Black",
+    "gallery": [
+      "assets/images/products/cases/cc-9011322-ww.avif"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "CC-9011270-WW",
+    "description": "CORSAIR FRAME 4000D RS ARGB Modular Tempered Glass ATX Mid-Tower PC Case - White",
+    "category": "Cases",
+    "unit": "Each",
+    "price": 84.99,
+    "currency": "USD",
+    "additionalInfo": "Standalone new case sold by Newegg; RS ARGB modular ATX mid-tower with steel and tempered-glass construction.",
+    "sourceUrl": "https://www.newegg.com/corsair-atx-mid-tower-frame-4000d-rs-argb-steel-tempered-glass-computer-case-white/p/N82E16811139231",
+    "imageSourceUrl": "https://c1.neweggimages.com/productimage/nb640/11-139-231-12.png",
+    "image": "assets/images/products/cases/cc-9011270-ww.webp",
+    "imageAlt": "CORSAIR FRAME 4000D RS ARGB Modular Tempered Glass ATX Mid-Tower PC Case - White",
+    "gallery": [
+      "assets/images/products/cases/cc-9011270-ww.webp"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "CC-9011200-WW",
+    "description": "Corsair 4000D AIRFLOW ATX Mid-Tower Case",
+    "category": "Cases",
+    "unit": "Each",
+    "price": 74.99,
+    "currency": "USD",
+    "additionalInfo": "Black; glass side panel; includes two 120 mm fans",
+    "sourceUrl": "https://www.corsair.com/us/en/p/pc-cases/cc-9011200-ww/4000d-airflow-tempered-glass-mid-tower-atx-case-black-cc-9011200-ww",
+    "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/base-4000d-airflow-config/Gallery/4000D_AF_BLACK_01.webp",
+    "image": "assets/images/products/cases/cc-9011200-ww.avif",
+    "imageAlt": "Corsair 4000D AIRFLOW ATX Mid-Tower Case",
+    "gallery": [
+      "assets/images/products/cases/cc-9011200-ww.avif"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  }
+]

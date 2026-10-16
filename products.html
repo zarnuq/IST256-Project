@@ -1,152 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Parts | Partwise</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop Parts | Partwise</title>
 
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/brite/bootstrap.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/brite/bootstrap.min.css"
+        />
 
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
 
-  <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="products.js" defer></script>
-</head>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            defer
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            defer
+        ></script>
+        <script src="js/products.js" defer></script>
+    </head>
 
-<body class="d-flex flex-column min-vh-100">
+    <body class="d-flex flex-column min-vh-100">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg bg-white sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-cpu-fill me-1" aria-hidden="true"></i>
+                    Partwise
+                </a>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-white sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <i class="bi bi-cpu-fill me-1" aria-hidden="true"></i>
-        Partwise
-      </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.html">Sign Up</a>
+                        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a>
-          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="members.html">Members</a>
-          </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="products.html"
+                                aria-current="page"
+                            >
+                                Shop
+                            </a>
+                        </li>
 
-          <li class="nav-item">
-            <a class="nav-link active"
-              href="products.html" aria-current="page">
-              Shop
-            </a>
-          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Builder</a>
+                        </li>
+                    </ul>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">Builder</a>
-          </li>
-        </ul>
+                    <div class="d-flex gap-2">
+                        <a
+                            class="btn btn-outline-dark"
+                            href="#"
+                            aria-label="Cart"
+                        >
+                            <i class="bi bi-cart" aria-hidden="true"></i>
+                        </a>
 
-        <div class="d-flex gap-2">
-          <a class="btn btn-outline-dark" href="#" aria-label="Cart">
-            <i class="bi bi-cart" aria-hidden="true"></i>
-          </a>
+                        <a class="btn btn-primary" href="signup.html">
+                            Join now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-          <a class="btn btn-primary" href="signup.html">
-            Join now
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+        <main class="container py-5 flex-grow-1">
+            <header class="mb-4">
+                <h1 class="fw-bold">Shop PC Parts</h1>
+                <p class="lead">Find the right parts for your next build.</p>
+                <p class="text-body-secondary">
+                    Sample catalog — product names and prices are for
+                    demonstration.
+                </p>
+            </header>
 
-  <main class="container py-5 flex-grow-1">
-    <header class="mb-4">
-      <h1 class="fw-bold">Shop PC Parts</h1>
-      <p class="lead">
-        Find the right parts for your next build.
-      </p>
-      <p class="text-body-secondary">
-        Sample catalog — product names and prices are for demonstration.
-      </p>
-    </header>
+            <!-- Search and category filter -->
+            <section class="card mb-4" aria-label="Find products">
+                <div class="card-body p-4">
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <label
+                                for="productSearch"
+                                class="form-label fw-bold"
+                            >
+                                Search products
+                            </label>
 
-    <!-- Search and category filter -->
-    <section class="card mb-4" aria-label="Find products">
-      <div class="card-body p-4">
-        <div class="row g-3">
+                            <input
+                                type="search"
+                                id="productSearch"
+                                class="form-control"
+                                placeholder="Search by product, brand, or part type..."
+                                aria-controls="productGrid"
+                            />
+                        </div>
 
-          <div class="col-md-8">
-            <label for="productSearch" class="form-label fw-bold">
-              Search products
-            </label>
+                        <div class="col-md-4">
+                            <label
+                                for="categoryFilter"
+                                class="form-label fw-bold"
+                            >
+                                Category
+                            </label>
 
-            <input
-              type="search"
-              id="productSearch"
-              class="form-control"
-              placeholder="Search by product, brand, or part type..."
-              aria-controls="productGrid">
-          </div>
+                            <select id="categoryFilter" class="form-select">
+                                <option value="all">All categories</option>
+                                <option value="CPU">CPUs</option>
+                                <option value="GPU">Graphics Cards</option>
+                                <option value="Motherboard">
+                                    Motherboards
+                                </option>
+                                <option value="RAM">Memory / RAM</option>
+                                <option value="Storage">Storage</option>
+                                <option value="Case">Cases</option>
+                                <option value="Power Supply">
+                                    Power Supplies
+                                </option>
+                                <option value="Cooling">Cooling</option>
+                            </select>
+                        </div>
+                    </div>
 
-          <div class="col-md-4">
-            <label for="categoryFilter" class="form-label fw-bold">
-              Category
-            </label>
+                    <button
+                        id="clearFilters"
+                        type="button"
+                        class="btn btn-outline-dark btn-sm mt-3"
+                    >
+                        Clear filters
+                    </button>
+                </div>
+            </section>
 
-            <select id="categoryFilter" class="form-select">
-              <option value="all">All categories</option>
-              <option value="CPU">CPUs</option>
-              <option value="GPU">Graphics Cards</option>
-              <option value="Motherboard">Motherboards</option>
-              <option value="RAM">Memory / RAM</option>
-              <option value="Storage">Storage</option>
-              <option value="Case">Cases</option>
-              <option value="Power Supply">Power Supplies</option>
-              <option value="Cooling">Cooling</option>
-            </select>
-          </div>
+            <p id="resultCount" role="status" aria-live="polite"></p>
 
-        </div>
+            <!-- JavaScript inserts the product cards here -->
+            <div id="productGrid" class="row g-4"></div>
 
-        <button id="clearFilters"
-          type="button"
-          class="btn btn-outline-dark btn-sm mt-3">
-          Clear filters
-        </button>
-      </div>
-    </section>
+            <div id="noResults" class="alert alert-info mt-4" hidden>
+                No products found. Try another search or category.
+            </div>
+        </main>
 
-    <p id="resultCount" role="status" aria-live="polite"></p>
-
-    <!-- JavaScript inserts the product cards here -->
-    <div id="productGrid" class="row g-4"></div>
-
-    <div id="noResults" class="alert alert-info mt-4" hidden>
-      No products found. Try another search or category.
-    </div>
-  </main>
-
-  <footer class="border-top py-4 mt-auto">
-    <div class="container text-center">
-      <p class="mb-0">Partwise — Build your next PC.</p>
-    </div>
-  </footer>
-
-</body>
+        <footer class="site-footer">
+            <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+                <span><strong>Partwise</strong> &middot; Web Development group project</span>
+                <span class="small">Oliver Aaron &middot; Jeremy Hou &middot; Miles Alford &middot; Anson Poon &middot; Aryan
+                    Vir</span>
+            </div>
+        </footer>
+    </body>
 </html>

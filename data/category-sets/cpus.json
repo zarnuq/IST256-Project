@@ -1,0 +1,56 @@
+[
+  {
+    "id": "AMD-100-000001404",
+    "description": "AMD Ryzen 7 9700X Granite Ridge AM5 3.80GHz eight-core boxed desktop processor",
+    "category": "CPUs",
+    "unit": "Each",
+    "price": 289.99,
+    "currency": "USD",
+    "additionalInfo": "8 cores, 16 threads; Zen 5; AM5; heatsink not included; Micro Center current price shown as $289.99.",
+    "sourceUrl": "https://www.microcenter.com/product/682199/amd-ryzen-7-9700x-granite-ridge-am5-380ghz-8-core-boxed-processor-heatsink-not-included",
+    "imageSourceUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/db6178ce-dd3b-40e5-a3de-0f551f1ea180.jpg;maxHeight=1920;maxWidth=900?format=webp",
+    "imagePageUrl": "https://www.bestbuy.com/product/amd-ryzen-7-9700x-8-core-16-thread-3-8-ghz-5-5-ghz-max-boost-socket-am5-pci-express-5-0-unlocked-desktop-processor-silver/JXKQHH5XFW",
+    "image": "assets/images/products/cpus/amd-100-000001404.webp",
+    "imageAlt": "AMD Ryzen 7 9700X Granite Ridge AM5 3.80GHz eight-core boxed desktop processor",
+    "gallery": [
+      "assets/images/products/cpus/amd-100-000001404.webp"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "AMD-100-100001084WOF",
+    "description": "AMD Ryzen 7 9800X3D 4.7 GHz Eight-Core AM5 desktop processor",
+    "category": "CPUs",
+    "unit": "Each",
+    "price": 444,
+    "currency": "USD",
+    "additionalInfo": "8 cores, 16 threads; Zen 5; 96MB 3D V-Cache; AM5; boxed processor (B&H product page lists $444.00).",
+    "sourceUrl": "https://www.bhphotovideo.com/c/product/1859346-REG/amd_100_100001084wof_ryzen_7_9800x3d_am5.html",
+    "imageSourceUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/43526f44-592b-47fe-bd57-c9be5a7c16e9.jpg;maxHeight=1920;maxWidth=900?format=webp",
+    "imagePageUrl": "https://www.bestbuy.com/product/amd-ryzen-7-9800x3d-8-core-16-thread-4-7-ghz-5-2-ghz-max-boost-socket-am5-pci-express-5-0-unlocked-desktop-processor-silver/JXKQHH5XSR",
+    "image": "assets/images/products/cpus/amd-100-100001084wof.webp",
+    "imageAlt": "AMD Ryzen 7 9800X3D 4.7 GHz Eight-Core AM5 desktop processor",
+    "gallery": [
+      "assets/images/products/cpus/amd-100-100001084wof.webp"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "BX80768285K",
+    "description": "Intel Core Ultra 9 Processor 285K 3.7 GHz 24-Core LGA 1851 desktop processor",
+    "category": "CPUs",
+    "unit": "Each",
+    "price": 629.99,
+    "currency": "USD",
+    "additionalInfo": "24 cores (8 P-cores + 16 E-cores), 24 threads, up to 5.7 GHz; LGA 1851; thermal solution not included.",
+    "sourceUrl": "https://www.bhphotovideo.com/c/product/1852498-REG/intel_bx80768285k_core_ultra_9_285k.html",
+    "imageSourceUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/0224860a-6519-429e-b610-38285cc3d33f.jpg;maxHeight=1920;maxWidth=900?format=webp",
+    "imagePageUrl": "https://www.bestbuy.com/product/intel-core-ultra-9-285k-24-cores-24-threads-4-6ghz-5-7-ghz-turbo-socket-lga-1851-unlocked-desktop-processor-multi/JXZRJ553QL",
+    "image": "assets/images/products/cpus/bx80768285k.webp",
+    "imageAlt": "Intel Core Ultra 9 Processor 285K 3.7 GHz 24-Core LGA 1851 desktop processor",
+    "gallery": [
+      "assets/images/products/cpus/bx80768285k.webp"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  }
+]

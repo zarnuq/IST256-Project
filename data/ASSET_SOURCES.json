@@ -1,0 +1,269 @@
+{
+  "retrievedAt": "2026-10-16",
+  "assets": [
+    {
+      "productId": "PRIME-X870-P-WIFI",
+      "category": "Motherboards",
+      "path": "assets/images/products/motherboards/prime-x870-p-wifi.png",
+      "url": "https://dlcdnwebimgs.asus.com/files/media/0397c9d8-60cf-4bee-b571-5005dd07a92a/v1.2/features/images/large/s1/pd.webp",
+      "sourceUrl": "https://www.bhphotovideo.com/c/product/1855748-REG/asus_prime_x870_p_wifi_am5.html",
+      "width": 735,
+      "height": 981,
+      "format": "PNG",
+      "bytes": 398651
+    },
+    {
+      "productId": "GV-N5060GAMING-OCV2-8GD",
+      "category": "Graphics Cards",
+      "path": "assets/images/products/graphics-cards/gv-n5060gaming-ocv2-8gd.webp",
+      "url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/12b6f27f-f386-4d1b-adba-53cb43078cf1.jpg;maxHeight=1920;maxWidth=900?format=webp",
+      "sourceUrl": "https://www.bestbuy.com/product/gigabyte-rtx-5060-gaming-oc-v2-8gb-gddr7-pcie-5-0-x8-windforce-cooling-gv-n5060gaming-ocv2-8gd/J3ZW9X7ZCV",
+      "width": 900,
+      "height": 675,
+      "format": "WEBP",
+      "bytes": 14232
+    },
+    {
+      "productId": "BX80768285K",
+      "category": "CPUs",
+      "path": "assets/images/products/cpus/bx80768285k.webp",
+      "url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/0224860a-6519-429e-b610-38285cc3d33f.jpg;maxHeight=1920;maxWidth=900?format=webp",
+      "sourceUrl": "https://www.bhphotovideo.com/c/product/1852498-REG/intel_bx80768285k_core_ultra_9_285k.html",
+      "width": 900,
+      "height": 1087,
+      "format": "WEBP",
+      "bytes": 20434
+    },
+    {
+      "productId": "VCG507012TFXPB1-O",
+      "category": "Graphics Cards",
+      "path": "assets/images/products/graphics-cards/vcg507012tfxpb1-o.webp",
+      "url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/f05d1173-3208-4f27-87cf-e79fbf8bf6ef.jpg;maxHeight=1920;maxWidth=900?format=webp",
+      "sourceUrl": "https://www.bestbuy.com/product/pny-nvidia-geforce-rtx-5070-overclocked-12gb-gddr7-pci-express-5-0-graphics-card-with-triple-fan-black/JXF2C4642R/sku/6620352",
+      "width": 900,
+      "height": 900,
+      "format": "WEBP",
+      "bytes": 21354
+    },
+    {
+      "productId": "ROG-STRIX-X870E-E-GAMING-WIFI",
+      "category": "Motherboards",
+      "path": "assets/images/products/motherboards/rog-strix-x870e-e-gaming-wifi.png",
+      "url": "https://dlcdnwebimgs.asus.com/gain/C2A10896-76C0-4772-9A3A-69D7B0C00441",
+      "sourceUrl": "https://www.bhphotovideo.com/c/product/1855752-REG/asus_rog_strix_x870e_e_gaming_wifi_republic_of_gamers_strix.html",
+      "width": 2400,
+      "height": 2400,
+      "format": "PNG",
+      "bytes": 1880294
+    },
+    {
+      "productId": "AMD-100-100001084WOF",
+      "category": "CPUs",
+      "path": "assets/images/products/cpus/amd-100-100001084wof.webp",
+      "url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/43526f44-592b-47fe-bd57-c9be5a7c16e9.jpg;maxHeight=1920;maxWidth=900?format=webp",
+      "sourceUrl": "https://www.bhphotovideo.com/c/product/1859346-REG/amd_100_100001084wof_ryzen_7_9800x3d_am5.html",
+      "width": 900,
+      "height": 1018,
+      "format": "WEBP",
+      "bytes": 23882
+    },
+    {
+      "productId": "PRIME-RTX5060TI-16G",
+      "category": "Graphics Cards",
+      "path": "assets/images/products/graphics-cards/prime-rtx5060ti-16g.png",
+      "url": "https://dlcdnwebimgs.asus.com/gain/6e4f87b1-b882-43c2-8646-4473c2c01d04/",
+      "sourceUrl": "https://www.bhphotovideo.com/c/product/1892196-REG/asus_prime_rtx5060ti_16g_prime_geforce_rtx_5060.html",
+      "width": 2400,
+      "height": 2400,
+      "format": "PNG",
+      "bytes": 2649872
+    },
+    {
+      "productId": "CMH32GX5M2B6000C30",
+      "category": "Memory / RAM",
+      "path": "assets/images/products/memory-ram/cmh32gx5m2b6000c30.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/2up/VENGEANCE_RGB_DDR5_BLK_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/memory/cmh32gx5m2b6000c30/vengeance-rgb-32gb-2x16gb-ddr5-dram-6000mt-s-c30-memory-kit-black-cmh32gx5m2b6000c30",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 33522
+    },
+    {
+      "productId": "CSSD-F1000GBMP600ENH",
+      "category": "Storage",
+      "path": "assets/images/products/storage/cssd-f1000gbmp600enh.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Storage/mp600-elite/CSSD-F1000GBMP600ENH/Gallery/MP600_ELITE_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/data-storage/cssd-f1000gbmp600enh/mp600-elite-1tb-pcie-gen4-x4-nvme-1-4-m-2-ssd-cssd-f1000gbmp600enh",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 25236
+    },
+    {
+      "productId": "CMP32GX5M2B6000C30",
+      "category": "Memory / RAM",
+      "path": "assets/images/products/memory-ram/cmp32gx5m2b6000c30.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/Dominator%20Titanium/enhanced%20images/black/2UP/DOMINATOR_TITANIUM_RGB_DDR5_BLACK_2UP_Artboard01_AA.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/memory/cmp32gx5m2b6000c30/dominator-titanium-rgb-2x16gb-ddr5-dram-6000mt-s-cl30-intel-xmp-memory-kit-cmp32gx5m2b6000c30",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 15543
+    },
+    {
+      "productId": "CMH32GX5M2B6000Z30K",
+      "category": "Memory / RAM",
+      "path": "assets/images/products/memory-ram/cmh32gx5m2b6000z30k.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-amd-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-32GB-GRAY_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/memory/cmh32gx5m2b6000z30k/vengeance-rgb-32gb-2x16gb-ddr5-dram-6000mt-s-cl30-amd-expo-intel-xmp-memory-kit-cmh32gx5m2b6000z30k",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 40141
+    },
+    {
+      "productId": "AMD-100-000001404",
+      "category": "CPUs",
+      "path": "assets/images/products/cpus/amd-100-000001404.webp",
+      "url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/db6178ce-dd3b-40e5-a3de-0f551f1ea180.jpg;maxHeight=1920;maxWidth=900?format=webp",
+      "sourceUrl": "https://www.microcenter.com/product/682199/amd-ryzen-7-9700x-granite-ridge-am5-380ghz-8-core-boxed-processor-heatsink-not-included",
+      "width": 900,
+      "height": 1029,
+      "format": "WEBP",
+      "bytes": 16866
+    },
+    {
+      "productId": "CSSD-F1000GBMP600CXTR2",
+      "category": "Storage",
+      "path": "assets/images/products/storage/cssd-f1000gbmp600cxtr2.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Storage/mp600-core-xt/MP600_CORE_XT_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/data-storage/cssd-f1000gbmp600cxtr2/mp600-core-xt-1tb-pcie-gen4-x4-nvme-1-4-m-2-ssd-cssd-f1000gbmp600cxtr2",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 54683
+    },
+    {
+      "productId": "PRIME-B550M-A-WIFI-II",
+      "category": "Motherboards",
+      "path": "assets/images/products/motherboards/prime-b550m-a-wifi-ii.png",
+      "url": "https://dlcdnwebimgs.asus.com/gain/2d1010dc-327c-4b58-88fb-89a677a32b02/",
+      "sourceUrl": "https://www.bhphotovideo.com/c/product/1717164-REG/asus_prime_b550m_a_wifi_ii.html",
+      "width": 2400,
+      "height": 2400,
+      "format": "PNG",
+      "bytes": 2694931
+    },
+    {
+      "productId": "CSSD-F1000GBMP600MN",
+      "category": "Storage",
+      "path": "assets/images/products/storage/cssd-f1000gbmp600mn.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Storage/CSSD-F1000GBMP600MN/Gallery/MP600_MINI_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/data-storage/cssd-f1000gbmp600mn/mp600-mini-1tb-gen4-pcie-x4-nvme-m-2-2230-ssd-cssd-f1000gbmp600mn",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 76780
+    },
+    {
+      "productId": "CC-9011322-WW",
+      "category": "Cases",
+      "path": "assets/images/products/cases/cc-9011322-ww.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/3500x/gallery/CC-9011322-WW/CC-9011322-WW_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/pc-cases/cc-9011322-ww/3500x-rs-r-argb-mid-tower-pc-case-cc-9011322-ww",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 25493
+    },
+    {
+      "productId": "CC-9011200-WW",
+      "category": "Cases",
+      "path": "assets/images/products/cases/cc-9011200-ww.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/base-4000d-airflow-config/Gallery/4000D_AF_BLACK_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/pc-cases/cc-9011200-ww/4000d-airflow-tempered-glass-mid-tower-atx-case-black-cc-9011200-ww",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 41291
+    },
+    {
+      "productId": "CO-9051053-WW",
+      "category": "Cooling",
+      "path": "assets/images/products/cooling/co-9051053-ww.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/icue-link-lx-r-rgb/Gallery/CO-9051053-WW/CO-9051053-WW_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/case-fans/co-9051053-ww/icue-link-lx120-r-rgb-120mm-pwm-reverse-fan-expansion-white-co-9051053-ww",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 26574
+    },
+    {
+      "productId": "CP-9020295-NA",
+      "category": "Power Supplies",
+      "path": "assets/images/products/power-supplies/cp-9020295-na.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020295-NA_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/psu/cp-9020295-na/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020295-na",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 90483
+    },
+    {
+      "productId": "CP-9020297-NA",
+      "category": "Power Supplies",
+      "path": "assets/images/products/power-supplies/cp-9020297-na.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020297-NA_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/psu/cp-9020297-na/rme-series-rm1000e-fully-modular-low-noise-atx-power-supply-cp-9020297-na",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 91407
+    },
+    {
+      "productId": "CP-9020336-NA",
+      "category": "Power Supplies",
+      "path": "assets/images/products/power-supplies/cp-9020336-na.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Power-Supply-Units/base-rme-series-with-thermalprotect-12v-2x6-2025/gallery/RM850e/Black/RM850e_ThermalProtect_Black_Artboard01_AA.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/psu/cp-9020336-na/rm850e-atx-3-1-low-noise-atx-power-supply-with-thermalprotect-12v-2x6-cable-cp-9020336-na",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 55934
+    },
+    {
+      "productId": "CO-9051001-WW",
+      "category": "Cooling",
+      "path": "assets/images/products/cooling/co-9051001-ww.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/CO-9051001-WW/gallery/QX120_RGB_RENDER_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/case-fans/co-9051001-ww/icue-link-qx120-rgb-120mm-pwm-pc-fan-expansion-kit-co-9051001-ww",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 43711
+    },
+    {
+      "productId": "CC-9011270-WW",
+      "category": "Cases",
+      "path": "assets/images/products/cases/cc-9011270-ww.webp",
+      "url": "https://c1.neweggimages.com/productimage/nb640/11-139-231-12.png",
+      "sourceUrl": "https://www.newegg.com/corsair-atx-mid-tower-frame-4000d-rs-argb-steel-tempered-glass-computer-case-white/p/N82E16811139231",
+      "width": 640,
+      "height": 844,
+      "format": "WEBP",
+      "bytes": 113084
+    },
+    {
+      "productId": "CO-9051021-WW",
+      "category": "Cooling",
+      "path": "assets/images/products/cooling/co-9051021-ww.avif",
+      "url": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/rx-series/CO-9051021-WW/Gallery/RX120_RGB_WHITE_RENDER_01.webp",
+      "sourceUrl": "https://www.corsair.com/us/en/p/case-fans/co-9051021-ww/icue-link-rx120-rgb-120mm-pwm-single-fan-expansion-white-co-9051021-ww",
+      "width": 1100,
+      "height": 1100,
+      "format": "AVIF",
+      "bytes": 44356
+    }
+  ]
+}

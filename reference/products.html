@@ -11,6 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* product card photo: uniform height, hard black edge to match the theme */
+    .product-img { height: 160px; object-fit: cover; border-bottom: 2px solid var(--partwise-ink); }
+    .filter-list .list-group-item.active { background: var(--partwise-lime); color: var(--partwise-ink); border-color: var(--partwise-ink); font-weight: 600; }
+  </style>
 </head>
 <body>
 
@@ -23,23 +28,15 @@
 
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="members.html">Members</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
           <li class="nav-item">
             <a class="nav-link active" href="products.html">Products
               <span class="visually-hidden">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a>
-          </li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">Builder <span class="badge text-bg-light border soon">Soon</span></a></li>
         </ul>
         <div class="d-flex gap-2">
           <a class="btn btn-outline-dark disabled" href="#" aria-label="Cart (coming soon)"><i class="bi bi-cart3"></i></a>
@@ -52,124 +49,108 @@
   <main class="py-5">
     <div class="container">
 
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
-        <div>
-          <h1 class="fw-bold mb-1">Products <span class="badge text-bg-primary border border-2 border-dark align-middle" id="productCount">0</span></h1>
-          <p class="text-body-secondary mb-0">Add, edit, search and remove PC parts in the catalog.</p>
+      <div class="mb-4">
+        <h1 class="fw-bold mb-1">Products <span class="badge text-bg-primary border border-2 border-dark align-middle" id="productCount">0</span></h1>
+        <p class="text-body-secondary mb-0">Add parts to the catalog, then edit or remove them from the cards below.</p>
+      </div>
+
+      <!-- Add / edit form: one horizontal bar across the top -->
+      <div class="card mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+            <h2 class="card-title h5 fw-bold mb-0" id="formTitle">Add a part</h2>
+            <div id="formAlert" role="alert" aria-live="polite" class="mb-0"></div>
+          </div>
+
+          <!-- novalidate turns off the browser pop-ups so our JavaScript messages show instead -->
+          <form id="productForm" novalidate>
+            <div class="row g-3 align-items-start">
+              <div class="col-6 col-md-4 col-lg">
+                <label for="id" class="form-label">Part ID *</label>
+                <input type="text" class="form-control" id="id" name="id" placeholder="GPU-4070" maxlength="20" required>
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-6 col-md-4 col-lg">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="RTX 4070 12GB" maxlength="80" required>
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-6 col-md-4 col-lg">
+                <label for="category" class="form-label">Category *</label>
+                <select class="form-select" id="category" name="category" required>
+                  <option value="">Choose&hellip;</option>
+                  <option>Case</option>
+                  <option>CPU</option>
+                  <option>GPU</option>
+                  <option>Motherboard</option>
+                  <option>RAM</option>
+                  <option>Storage</option>
+                  <option>Power Supply</option>
+                  <option>Cooling</option>
+                </select>
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-6 col-md-4 col-lg">
+                <label for="unit" class="form-label">Unit *</label>
+                <select class="form-select" id="unit" name="unit" required>
+                  <option value="">Choose&hellip;</option>
+                  <option>Each</option>
+                  <option>Pack</option>
+                  <option>Kit</option>
+                </select>
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-6 col-md-4 col-lg">
+                <label for="price" class="form-label">Price (USD) *</label>
+                <input type="number" class="form-control" id="price" name="price" placeholder="549.99" min="0" step="0.01" required>
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-6 col-md-4 col-lg">
+                <label for="weight" class="form-label">Weight <span class="text-body-secondary fw-normal">(opt.)</span></label>
+                <input type="text" class="form-control" id="weight" name="weight" placeholder="1.2 kg" maxlength="30">
+                <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-12 col-lg-auto d-flex align-items-end gap-2">
+                <button type="submit" class="btn btn-primary" id="submitBtn">Add part</button>
+                <button type="button" class="btn btn-light d-none" id="cancelBtn">Cancel</button>
+              </div>
+            </div>
+          </form>
         </div>
-        <button type="button" class="btn btn-dark" id="downloadBtn"><i class="bi bi-download me-1" aria-hidden="true"></i>Download products.json</button>
       </div>
 
       <div class="row g-4">
 
-        <!-- Add / edit form -->
-        <div class="col-lg-5">
+        <!-- Category filter: left sidebar -->
+        <div class="col-lg-3">
           <div class="card">
-            <div class="card-body p-4">
-              <h2 class="card-title h5 fw-bold mb-3" id="formTitle">Add a part</h2>
-              <div id="formAlert" role="alert" aria-live="polite"></div>
-
-              <!-- novalidate turns off the browser pop-ups so our JavaScript messages show instead -->
-              <form id="productForm" novalidate>
-                <div class="mb-3">
-                  <label for="id" class="form-label">Part ID *</label>
-                  <input type="text" class="form-control" id="id" name="id" placeholder="GPU-4070" maxlength="20" required>
-                  <div class="invalid-feedback"></div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name *</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="NimbusForce RTX 4070 12GB" maxlength="80" required>
-                  <div class="invalid-feedback"></div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-6 mb-3">
-                    <label for="category" class="form-label">Category *</label>
-                    <select class="form-select" id="category" name="category" required>
-                      <option value="">Choose&hellip;</option>
-                      <option>Case</option>
-                      <option>CPU</option>
-                      <option>GPU</option>
-                      <option>Motherboard</option>
-                      <option>RAM</option>
-                      <option>Storage</option>
-                      <option>Power Supply</option>
-                      <option>Cooling</option>
-                    </select>
-                    <div class="invalid-feedback"></div>
-                  </div>
-                  <div class="col-sm-6 mb-3">
-                    <label for="unit" class="form-label">Unit of measure *</label>
-                    <select class="form-select" id="unit" name="unit" required>
-                      <option value="">Choose&hellip;</option>
-                      <option>Each</option>
-                      <option>Pack</option>
-                      <option>Kit</option>
-                    </select>
-                    <div class="invalid-feedback"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-6 mb-3">
-                    <label for="price" class="form-label">Price (USD) *</label>
-                    <input type="number" class="form-control" id="price" name="price" placeholder="549.99" min="0" step="0.01" required>
-                    <div class="invalid-feedback"></div>
-                  </div>
-                  <div class="col-sm-6 mb-3">
-                    <label for="weight" class="form-label">Weight <span class="text-body-secondary fw-normal">(optional)</span></label>
-                    <input type="text" class="form-control" id="weight" name="weight" placeholder="1.2 kg" maxlength="30">
-                    <div class="invalid-feedback"></div>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-wrap gap-2">
-                  <button type="submit" class="btn btn-primary" id="submitBtn">Add part</button>
-                  <button type="button" class="btn btn-light d-none" id="cancelBtn">Cancel edit</button>
-                </div>
-              </form>
+            <div class="card-body">
+              <h2 class="h6 fw-bold mb-3"><i class="bi bi-funnel me-1" aria-hidden="true"></i>Category</h2>
+              <div class="list-group filter-list" id="categoryFilter">
+                <button type="button" class="list-group-item list-group-item-action active" data-category="All">All parts</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="Case">Case</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="CPU">CPU</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="GPU">GPU</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="Motherboard">Motherboard</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="RAM">RAM</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="Storage">Storage</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="Power Supply">Power Supply</button>
+                <button type="button" class="list-group-item list-group-item-action" data-category="Cooling">Cooling</button>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Catalog table -->
-        <div class="col-lg-7">
-          <div class="card">
-            <div class="card-body">
-              <div class="mb-3">
-                <label for="searchInput" class="visually-hidden">Search parts</label>
-                <input type="search" class="form-control" id="searchInput" placeholder="Search by ID, name or category">
-              </div>
-              <div class="table-responsive">
-                <table class="table table-hover align-middle mb-0">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Part ID</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Category</th>
-                      <th scope="col">Unit</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Weight</th>
-                      <th scope="col" class="text-end">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody id="productRows"></tbody>
-                </table>
-              </div>
-            </div>
+        <!-- Search + product grid -->
+        <div class="col-lg-9">
+          <div class="mb-4">
+            <label for="searchInput" class="visually-hidden">Search parts</label>
+            <input type="search" class="form-control form-control-lg" id="searchInput" placeholder="Search parts by ID, name or category&hellip;">
           </div>
+          <div class="row g-4" id="productGrid"></div>
         </div>
 
       </div>
-
-      <!-- Raw JSON, same as what the products.json download contains -->
-      <section class="mt-5" aria-labelledby="jsonHeading">
-        <h2 class="h4 fw-bold" id="jsonHeading"><i class="bi bi-filetype-json me-1" aria-hidden="true"></i>Stored data (products.json)</h2>
-        <p class="text-body-secondary">This is the JSON the site stores for your catalog. Use <strong>Download products.json</strong> to save it as a file.</p>
-        <pre class="json-preview" id="jsonPreview" tabindex="0">[]</pre>
-      </section>
 
     </div>
   </main>

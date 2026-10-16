@@ -1,0 +1,54 @@
+[
+  {
+    "id": "PRIME-RTX5060TI-16G",
+    "description": "ASUS GeForce RTX 5060 Ti PRIME 16GB GDDR7 PCI Express 5.0 graphics card",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 869.99,
+    "currency": "USD",
+    "additionalInfo": "New discrete desktop graphics card; 16GB GDDR7; PCIe 5.0; ASUS PRIME design.",
+    "sourceUrl": "https://www.bhphotovideo.com/c/product/1892196-REG/asus_prime_rtx5060ti_16g_prime_geforce_rtx_5060.html",
+    "imageSourceUrl": "https://dlcdnwebimgs.asus.com/gain/6e4f87b1-b882-43c2-8646-4473c2c01d04/",
+    "imagePageUrl": "https://www.asus.com/us/motherboards-components/graphics-cards/prime/prime-rtx5060ti-16g/",
+    "image": "assets/images/products/graphics-cards/prime-rtx5060ti-16g.png",
+    "imageAlt": "ASUS GeForce RTX 5060 Ti PRIME 16GB GDDR7 PCI Express 5.0 graphics card",
+    "gallery": [
+      "assets/images/products/graphics-cards/prime-rtx5060ti-16g.png"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "GV-N5060GAMING-OCV2-8GD",
+    "description": "GIGABYTE RTX 5060 GAMING OC V2 8GB GDDR7 PCIe 5.0 x8 WINDFORCE Cooling (GV-N5060GAMING OCV2-8GD) desktop graphics card",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 407.98,
+    "currency": "USD",
+    "additionalInfo": "New discrete desktop graphics card; 8GB GDDR7; PCIe 5.0 x8; WINDFORCE cooling.",
+    "sourceUrl": "https://www.bestbuy.com/product/gigabyte-rtx-5060-gaming-oc-v2-8gb-gddr7-pcie-5-0-x8-windforce-cooling-gv-n5060gaming-ocv2-8gd/J3ZW9X7ZCV",
+    "imageSourceUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/12b6f27f-f386-4d1b-adba-53cb43078cf1.jpg;maxHeight=1920;maxWidth=900?format=webp",
+    "image": "assets/images/products/graphics-cards/gv-n5060gaming-ocv2-8gd.webp",
+    "imageAlt": "GIGABYTE RTX 5060 GAMING OC V2 8GB GDDR7 PCIe 5.0 x8 WINDFORCE Cooling (GV-N5060GAMING OCV2-8GD) desktop graphics card",
+    "gallery": [
+      "assets/images/products/graphics-cards/gv-n5060gaming-ocv2-8gd.webp"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  },
+  {
+    "id": "VCG507012TFXPB1-O",
+    "description": "PNY NVIDIA GeForce RTX 5070 Overclocked 12GB GDDR7 PCI Express 5.0 Graphics Card with Triple Fan - Black",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 849.99,
+    "currency": "USD",
+    "additionalInfo": "New discrete desktop graphics card; 12GB GDDR7; PCI Express 5.0; triple-fan cooler.",
+    "sourceUrl": "https://www.bestbuy.com/product/pny-nvidia-geforce-rtx-5070-overclocked-12gb-gddr7-pci-express-5-0-graphics-card-with-triple-fan-black/JXF2C4642R/sku/6620352",
+    "imageSourceUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/f05d1173-3208-4f27-87cf-e79fbf8bf6ef.jpg;maxHeight=1920;maxWidth=900?format=webp",
+    "image": "assets/images/products/graphics-cards/vcg507012tfxpb1-o.webp",
+    "imageAlt": "PNY NVIDIA GeForce RTX 5070 Overclocked 12GB GDDR7 PCI Express 5.0 Graphics Card with Triple Fan - Black",
+    "gallery": [
+      "assets/images/products/graphics-cards/vcg507012tfxpb1-o.webp"
+    ],
+    "priceCheckedAt": "2026-10-16"
+  }
+]

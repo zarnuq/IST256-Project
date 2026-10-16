@@ -1,0 +1,7 @@
+[
+  { "id": "CPU", "label": "Processors", "file": "cpu.json" },
+  { "id": "GPU", "label": "Graphics cards", "file": "gpu.json" },
+  { "id": "RAM", "label": "Memory", "file": "ram.json" },
+  { "id": "Storage", "label": "Storage", "file": "storage.json" },
+  { "id": "Case", "label": "Cases", "file": "case.json" }
+]
