@@ -1,0 +1,42 @@
+[
+  {
+    "id": "CPU-001",
+    "description": "8-Core Desktop Processor",
+    "category": "CPU",
+    "unit": "Each",
+    "price": 249.99,
+    "additionalInfo": "Cooler sold separately"
+  },
+  {
+    "id": "GPU-001",
+    "description": "12 GB Graphics Card",
+    "category": "GPU",
+    "unit": "Each",
+    "price": 399.99,
+    "additionalInfo": "Dual-fan cooling"
+  },
+  {
+    "id": "RAM-001",
+    "description": "32 GB DDR5 Memory",
+    "category": "RAM",
+    "unit": "Kit",
+    "price": 89.99,
+    "additionalInfo": "Two 16 GB modules"
+  },
+  {
+    "id": "SSD-001",
+    "description": "1 TB NVMe SSD",
+    "category": "Storage",
+    "unit": "Each",
+    "price": 69.99,
+    "additionalInfo": "PCIe 4.0"
+  },
+  {
+    "id": "CASE-001",
+    "description": "Mid-Tower PC Case",
+    "category": "Case",
+    "unit": "Each",
+    "price": 79.99,
+    "additionalInfo": "Includes two fans"
+  }
+]
