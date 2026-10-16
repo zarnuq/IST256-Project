@@ -1,7 +1,4 @@
-// members.js: shows the members table, with search, edit, delete and download.
-
-// ===== Members table group =====
-
+// grabbing the table stuff from the page so we can mess with it
 const memberRows = document.getElementById('memberRows');
 const memberCount = document.getElementById('memberCount');
 const searchInput = document.getElementById('searchInput');
@@ -25,6 +22,7 @@ function makeButton(label, style, onClick) {
 
 // Redraws the table and the member count.
 function render() {
+  // fresh copy of everyone from localStorage
   const members = getMembers();
   const search = searchInput.value.toLowerCase();
   const shown = members.filter(function (m) {
@@ -41,6 +39,7 @@ function render() {
     return;
   }
 
+  // member rows
   shown.forEach(function (m, index) {
     const row = memberRows.insertRow();
     addCell(row, index + 1);
@@ -52,6 +51,7 @@ function render() {
     addCell(row, m.role);
     addCell(row, new Date(m.createdAt).toLocaleDateString());
 
+    // edit and delete buttons go in the last column
     const actions = document.createElement('td');
     actions.className = 'text-end text-nowrap';
     actions.append(
@@ -66,7 +66,6 @@ searchInput.addEventListener('input', render);
 document.getElementById('downloadBtn').addEventListener('click', downloadMembers);
 render();
 
-// ===== Members edit and delete group =====
 
 const editForm = document.getElementById('editForm');
 const editModal = new bootstrap.Modal(document.getElementById('editModal'));
@@ -75,6 +74,7 @@ let editingId = null;
 // Opens the edit modal filled in with this member's details.
 function openEdit(member) {
   editingId = member.id;
+  // copy their info into the form boxes
   FIELDS.forEach(function (name) {
     editForm.elements[name].value = member[name];
   });

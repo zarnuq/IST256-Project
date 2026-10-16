@@ -1,6 +1,3 @@
-/* styles.css: small touches on top of the Bootswatch Brite theme. */
-
-/* Brite cards already have the 2px black border; add the hard shadow. */
 .card {
     box-shadow: 4px 4px 0 #000;
 }

@@ -1,4 +1,5 @@
-// signup.js: validates the sign-up form and saves the new member.
+// signup.js
+
 const signupForm = document.getElementById('signupForm');
 const formAlert = document.getElementById('formAlert');
 
@@ -10,9 +11,11 @@ function showAlert(type, message) {
 
 // Validates the submitted fields and saves the member when there are no errors.
 signupForm.addEventListener('submit', function (event) {
+  // no page reload please
   event.preventDefault();
   const data = readForm(signupForm);
   const errors = validateMember(data);
+  // emails gotta be unique
   if (emailTaken(data.email)) {
     errors.email = 'That email is already registered.';
   }
@@ -23,7 +26,9 @@ signupForm.addEventListener('submit', function (event) {
     return;
   }
 
+  // save the new member
   const member = addMember(data);
+  // empty the form so it's ready for the next person
   signupForm.reset();
   showAlert('success', 'Welcome, ' + member.fullName + '! Your account was created.');
 });

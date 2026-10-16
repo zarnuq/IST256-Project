@@ -1,9 +1,11 @@
-// storage.js: the only file that reads or writes member data.
+// storage.js
 
+// the key we stash everything under in localStorage
 const STORAGE_KEY = 'partwise.users';
 
 // Returns the saved members array (empty if nothing is saved yet).
 function getMembers() {
+  // the || [] covers the first visit when nothing's saved yet
   return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 }
 
@@ -22,6 +24,7 @@ function emailTaken(email, ignoreId) {
 // Saves a new member from form data and returns it.
 function addMember(data) {
   const members = getMembers();
+  // same timestamp for created and updated since it's brand new
   const now = new Date().toISOString();
   const member = {
     id: String(Date.now()),
@@ -30,6 +33,7 @@ function addMember(data) {
     phone: data.phone,
     age: Number(data.age),
     address: data.address,
+    // everyone starts as a customer
     role: 'customer',
     createdAt: now,
     updatedAt: now
@@ -46,6 +50,7 @@ function updateMember(id, data) {
   FIELDS.forEach(function (name) {
     member[name] = data[name];
   });
+  // age comes in as text so turn it back into a number
   member.age = Number(data.age);
   member.updatedAt = new Date().toISOString();
   saveMembers(members);
