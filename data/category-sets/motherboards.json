@@ -10,7 +10,7 @@
     "sourceUrl": "https://www.bhphotovideo.com/c/product/1717164-REG/asus_prime_b550m_a_wifi_ii.html",
     "imageSourceUrl": "https://dlcdnwebimgs.asus.com/gain/2d1010dc-327c-4b58-88fb-89a677a32b02/",
     "imagePageUrl": "https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b550m-a-wifi-ii/",
-    "image": "assets/images/products/motherboards/prime-b550m-a-wifi-ii.png",
+    "image": "https://dlcdnwebimgs.asus.com/gain/2d1010dc-327c-4b58-88fb-89a677a32b02/",
     "imageAlt": "ASUS PRIME B550M-A WIFI II Micro-ATX DDR4 Motherboard",
     "gallery": [
       "assets/images/products/motherboards/prime-b550m-a-wifi-ii.png"
@@ -29,7 +29,7 @@
     "imageSourceUrl": "https://dlcdnwebimgs.asus.com/files/media/0397c9d8-60cf-4bee-b571-5005dd07a92a/v1.2/features/images/large/s1/pd.webp",
     "availability": "Temporarily Out of Stock",
     "imagePageUrl": "https://www.asus.com/us/motherboards-components/motherboards/prime/prime-x870-p-wifi/",
-    "image": "assets/images/products/motherboards/prime-x870-p-wifi.png",
+    "image": "https://dlcdnwebimgs.asus.com/files/media/0397c9d8-60cf-4bee-b571-5005dd07a92a/v1.2/features/images/large/s1/pd.webp",
     "imageAlt": "ASUS PRIME X870-P WIFI AM5 ATX Motherboard",
     "gallery": [
       "assets/images/products/motherboards/prime-x870-p-wifi.png"
@@ -48,7 +48,7 @@
     "imageSourceUrl": "https://dlcdnwebimgs.asus.com/gain/C2A10896-76C0-4772-9A3A-69D7B0C00441",
     "availability": "Temporarily Out of Stock",
     "imagePageUrl": "https://rog.asus.com/motherboards/rog-strix/rog-strix-x870e-e-gaming-wifi/",
-    "image": "assets/images/products/motherboards/rog-strix-x870e-e-gaming-wifi.png",
+    "image": "https://dlcdnwebimgs.asus.com/gain/C2A10896-76C0-4772-9A3A-69D7B0C00441",
     "imageAlt": "ASUS Republic of Gamers Strix X870E-E Gaming WiFi AM5 ATX Motherboard",
     "gallery": [
       "assets/images/products/motherboards/rog-strix-x870e-e-gaming-wifi.png"

@@ -9,7 +9,7 @@
     "additionalInfo": "850 W desktop PSU; ATX 3.1; low-noise design; includes ThermalProtect 12V-2x6 cable.",
     "sourceUrl": "https://www.corsair.com/us/en/p/psu/cp-9020336-na/rm850e-atx-3-1-low-noise-atx-power-supply-with-thermalprotect-12v-2x6-cable-cp-9020336-na",
     "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Power-Supply-Units/base-rme-series-with-thermalprotect-12v-2x6-2025/gallery/RM850e/Black/RM850e_ThermalProtect_Black_Artboard01_AA.webp",
-    "image": "assets/images/products/power-supplies/cp-9020336-na.avif",
+    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Power-Supply-Units/base-rme-series-with-thermalprotect-12v-2x6-2025/gallery/RM850e/Black/RM850e_ThermalProtect_Black_Artboard01_AA.webp",
     "imageAlt": "CORSAIR RM850e ATX 3.1 low-noise ATX power supply with ThermalProtect 12V-2x6 cable",
     "gallery": [
       "assets/images/products/power-supplies/cp-9020336-na.avif"
@@ -26,7 +26,7 @@
     "additionalInfo": "1000 W desktop PSU; fully modular; low-noise design; Intel ATX 3.1 certified and PCIe 5.1 compatible.",
     "sourceUrl": "https://www.corsair.com/us/en/p/psu/cp-9020297-na/rme-series-rm1000e-fully-modular-low-noise-atx-power-supply-cp-9020297-na",
     "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020297-NA_01.webp",
-    "image": "assets/images/products/power-supplies/cp-9020297-na.avif",
+    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020297-NA_01.webp",
     "imageAlt": "CORSAIR RMe Series RM1000e fully modular low-noise ATX power supply",
     "gallery": [
       "assets/images/products/power-supplies/cp-9020297-na.avif"
@@ -43,7 +43,7 @@
     "additionalInfo": "750 W desktop PSU; fully modular; low-noise design; Intel ATX 3.1 certified and PCIe 5.1 compatible.",
     "sourceUrl": "https://www.corsair.com/us/en/p/psu/cp-9020295-na/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020295-na",
     "imageSourceUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020295-NA_01.webp",
-    "image": "assets/images/products/power-supplies/cp-9020295-na.avif",
+    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020295-NA_01.webp",
     "imageAlt": "CORSAIR RMe Series RM750e fully modular low-noise ATX power supply",
     "gallery": [
       "assets/images/products/power-supplies/cp-9020295-na.avif"
