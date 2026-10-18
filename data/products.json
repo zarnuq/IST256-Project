@@ -1,42 +1,245 @@
 [
   {
-    "id": "CPU-001",
-    "description": "8-Core Desktop Processor",
-    "category": "CPU",
+    "id": "AMD-100-000001404",
+    "description": "AMD Ryzen 7 9700X Granite Ridge AM5 3.80GHz eight-core boxed desktop processor",
+    "category": "CPUs",
     "unit": "Each",
-    "price": 249.99,
-    "additionalInfo": "Cooler sold separately"
+    "price": 289.99,
+    "additionalInfo": "8 cores, 16 threads; AM5; cooler not included",
+    "image": "images/products/amd-100-000001404.webp"
   },
   {
-    "id": "GPU-001",
-    "description": "12 GB Graphics Card",
-    "category": "GPU",
+    "id": "AMD-100-100001084WOF",
+    "description": "AMD Ryzen 7 9800X3D 4.7 GHz Eight-Core AM5 desktop processor",
+    "category": "CPUs",
     "unit": "Each",
-    "price": 399.99,
-    "additionalInfo": "Dual-fan cooling"
+    "price": 444,
+    "additionalInfo": "8 cores, 16 threads; 96 MB 3D V-Cache; AM5",
+    "image": "images/products/amd-100-100001084wof.webp"
   },
   {
-    "id": "RAM-001",
-    "description": "32 GB DDR5 Memory",
-    "category": "RAM",
+    "id": "BX80768285K",
+    "description": "Intel Core Ultra 9 Processor 285K 3.7 GHz 24-Core LGA 1851 desktop processor",
+    "category": "CPUs",
+    "unit": "Each",
+    "price": 629.99,
+    "additionalInfo": "24 cores, up to 5.7 GHz; LGA 1851; cooler not included",
+    "image": "images/products/bx80768285k.webp"
+  },
+  {
+    "id": "rtx-5090-black-oc",
+    "description": "ASUS ROG Astral GeForce RTX 5090 32GB OC Edition",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 6859.99,
+    "additionalInfo": "32 GB GDDR7; 575 W; 358 mm long",
+    "image": "images/products/rtx-5090-black-oc.webp"
+  },
+  {
+    "id": "rtx-5080-white-oc",
+    "description": "MSI GeForce RTX 5080 16G VENTUS 3X OC WHITE",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 1649.99,
+    "additionalInfo": "16 GB GDDR7; 360 W; 303 mm long",
+    "image": "images/products/rtx-5080-white-oc.jpg"
+  },
+  {
+    "id": "rtx-5070-ti-black-oc",
+    "description": "ASUS TUF Gaming GeForce RTX 5070 Ti 16GB OC Edition",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 1612.49,
+    "additionalInfo": "16 GB GDDR7; 300 W; 329 mm long",
+    "image": "images/products/rtx-5070-ti-black-oc.webp"
+  },
+  {
+    "id": "rtx-5070-black-oc",
+    "description": "GIGABYTE GeForce RTX 5070 GAMING OC 12G",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 1103,
+    "additionalInfo": "12 GB GDDR7; 250 W; 290 mm long",
+    "image": "images/products/rtx-5070-black-oc.jpg"
+  },
+  {
+    "id": "rtx-5060-ti-16gb-black-oc",
+    "description": "ASUS DUAL GeForce RTX 5060 Ti 16GB OC Edition",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 499.99,
+    "additionalInfo": "16 GB GDDR7; 180 W; 229 mm long",
+    "image": "images/products/rtx-5060-ti-16gb-black-oc.webp"
+  },
+  {
+    "id": "rx-9070-black-oc",
+    "description": "GIGABYTE Radeon RX 9070 GAMING OC 16G",
+    "category": "Graphics Cards",
+    "unit": "Each",
+    "price": 679.99,
+    "additionalInfo": "16 GB GDDR6; 245 W; 288 mm long",
+    "image": "images/products/rx-9070-black-oc.webp"
+  },
+  {
+    "id": "PRIME-B550M-A-WIFI-II",
+    "description": "ASUS PRIME B550M-A WIFI II Micro-ATX DDR4 Motherboard",
+    "category": "Motherboards",
+    "unit": "Each",
+    "price": 109.99,
+    "additionalInfo": "Micro-ATX; AM4; DDR4; Wi-Fi",
+    "image": "images/products/prime-b550m-a-wifi-ii.webp"
+  },
+  {
+    "id": "PRIME-X870-P-WIFI",
+    "description": "ASUS PRIME X870-P WIFI AM5 ATX Motherboard",
+    "category": "Motherboards",
+    "unit": "Each",
+    "price": 189.99,
+    "additionalInfo": "ATX; AM5; Wi-Fi",
+    "image": "images/products/prime-x870-p-wifi.webp"
+  },
+  {
+    "id": "ROG-STRIX-X870E-E-GAMING-WIFI",
+    "description": "ASUS Republic of Gamers Strix X870E-E Gaming WiFi AM5 ATX Motherboard",
+    "category": "Motherboards",
+    "unit": "Each",
+    "price": 379.99,
+    "additionalInfo": "ATX; AM5; Wi-Fi",
+    "image": "images/products/rog-strix-x870e-e-gaming-wifi.webp"
+  },
+  {
+    "id": "CMP32GX5M2B6000C30",
+    "description": "CORSAIR DOMINATOR TITANIUM RGB 32GB (2x16GB) DDR5 DRAM up to 6000MT/s CL30 Intel XMP memory kit, black",
+    "category": "Memory / RAM",
     "unit": "Kit",
-    "price": 89.99,
-    "additionalInfo": "Two 16 GB modules"
+    "price": 676.99,
+    "additionalInfo": "2 x 16 GB DDR5; Intel XMP; RGB",
+    "image": "images/products/cmp32gx5m2b6000c30.webp"
   },
   {
-    "id": "SSD-001",
-    "description": "1 TB NVMe SSD",
+    "id": "CMH32GX5M2B6000Z30K",
+    "description": "CORSAIR VENGEANCE RGB 32GB (2x16GB) DDR5 DRAM 6000MT/s CL30 AMD EXPO and Intel XMP memory kit",
+    "category": "Memory / RAM",
+    "unit": "Kit",
+    "price": 569.99,
+    "additionalInfo": "2 x 16 GB DDR5; AMD EXPO and Intel XMP; RGB",
+    "image": "images/products/cmh32gx5m2b6000z30k.webp"
+  },
+  {
+    "id": "CMH32GX5M2B6000C30",
+    "description": "CORSAIR VENGEANCE RGB 32GB (2x16GB) DDR5 DRAM memory kit, up to 6000MT/s CL30, black",
+    "category": "Memory / RAM",
+    "unit": "Kit",
+    "price": 559.99,
+    "additionalInfo": "2 x 16 GB DDR5; Intel XMP; RGB",
+    "image": "images/products/cmh32gx5m2b6000c30.webp"
+  },
+  {
+    "id": "CSSD-F1000GBMP600CXTR2",
+    "description": "CORSAIR MP600 CORE XT 1TB PCIe Gen4 x4 NVMe 1.4 M.2 SSD",
     "category": "Storage",
     "unit": "Each",
-    "price": 69.99,
-    "additionalInfo": "PCIe 4.0"
+    "price": 254.99,
+    "additionalInfo": "M.2 2280; PCIe 4.0; 5-year warranty",
+    "image": "images/products/cssd-f1000gbmp600cxtr2.webp"
   },
   {
-    "id": "CASE-001",
-    "description": "Mid-Tower PC Case",
-    "category": "Case",
+    "id": "CSSD-F1000GBMP600ENH",
+    "description": "CORSAIR MP600 ELITE 1TB PCIe Gen4 x4 NVMe 1.4 M.2 SSD",
+    "category": "Storage",
     "unit": "Each",
-    "price": 79.99,
-    "additionalInfo": "Includes two fans"
+    "price": 439.99,
+    "additionalInfo": "M.2 2280; PCIe 4.0; up to 7,000 MB/s read",
+    "image": "images/products/cssd-f1000gbmp600enh.webp"
+  },
+  {
+    "id": "CSSD-F1000GBMP600MN",
+    "description": "CORSAIR MP600 MINI 1TB (Gen4) PCIe x4 NVMe M.2 2230 SSD",
+    "category": "Storage",
+    "unit": "Each",
+    "price": 414.99,
+    "additionalInfo": "M.2 2230 for handhelds; PCIe 4.0",
+    "image": "images/products/cssd-f1000gbmp600mn.webp"
+  },
+  {
+    "id": "CC-9011322-WW",
+    "description": "CORSAIR 3500X RS-R ARGB Tempered Glass ATX Mid-Tower PC Case - Black",
+    "category": "Cases",
+    "unit": "Each",
+    "price": 119.99,
+    "additionalInfo": "Glass panels; three ARGB fans included",
+    "image": "images/products/cc-9011322-ww.webp"
+  },
+  {
+    "id": "CC-9011270-WW",
+    "description": "CORSAIR FRAME 4000D RS ARGB Modular Tempered Glass ATX Mid-Tower PC Case - White",
+    "category": "Cases",
+    "unit": "Each",
+    "price": 84.99,
+    "additionalInfo": "Modular; tempered glass; white",
+    "image": "images/products/cc-9011270-ww.webp"
+  },
+  {
+    "id": "CC-9011200-WW",
+    "description": "Corsair 4000D AIRFLOW ATX Mid-Tower Case",
+    "category": "Cases",
+    "unit": "Each",
+    "price": 74.99,
+    "additionalInfo": "Glass side panel; two 120 mm fans included",
+    "image": "images/products/cc-9011200-ww.webp"
+  },
+  {
+    "id": "CP-9020336-NA",
+    "description": "CORSAIR RM850e ATX 3.1 low-noise ATX power supply with ThermalProtect 12V-2x6 cable",
+    "category": "Power Supplies",
+    "unit": "Each",
+    "price": 139.99,
+    "additionalInfo": "850 W; ATX 3.1; low noise",
+    "image": "images/products/cp-9020336-na.webp"
+  },
+  {
+    "id": "CP-9020297-NA",
+    "description": "CORSAIR RMe Series RM1000e fully modular low-noise ATX power supply",
+    "category": "Power Supplies",
+    "unit": "Each",
+    "price": 189.99,
+    "additionalInfo": "1000 W; fully modular; ATX 3.1",
+    "image": "images/products/cp-9020297-na.webp"
+  },
+  {
+    "id": "CP-9020295-NA",
+    "description": "CORSAIR RMe Series RM750e fully modular low-noise ATX power supply",
+    "category": "Power Supplies",
+    "unit": "Each",
+    "price": 89.99,
+    "additionalInfo": "750 W; fully modular; ATX 3.1",
+    "image": "images/products/cp-9020295-na.webp"
+  },
+  {
+    "id": "CO-9051053-WW",
+    "description": "iCUE LINK LX120-R RGB 120mm PWM Reverse Fan Expansion - White",
+    "category": "Cooling",
+    "unit": "Each",
+    "price": 44.99,
+    "additionalInfo": "120 mm; reverse airflow; RGB; white",
+    "image": "images/products/co-9051053-ww.webp"
+  },
+  {
+    "id": "CO-9051001-WW",
+    "description": "iCUE LINK QX120 RGB 120mm PWM PC Fan Expansion Kit",
+    "category": "Cooling",
+    "unit": "Each",
+    "price": 54.99,
+    "additionalInfo": "120 mm; RGB",
+    "image": "images/products/co-9051001-ww.webp"
+  },
+  {
+    "id": "CO-9051021-WW",
+    "description": "iCUE LINK RX120 RGB 120mm PWM Single Fan Expansion - White",
+    "category": "Cooling",
+    "unit": "Each",
+    "price": 34.99,
+    "additionalInfo": "120 mm; RGB; white",
+    "image": "images/products/co-9051021-ww.webp"
   }
 ]
