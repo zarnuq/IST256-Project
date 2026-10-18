@@ -1,169 +1,143 @@
-// Display the shared category catalog in the existing Shop page.
-(() => {
-  const grid = $('#productGrid');
-  const search = $('#productSearch');
-  const categoryFilter = $('#categoryFilter');
-  const count = $('#resultCount');
-  const noResults = $('#noResults');
-  const clearFilters = $('#clearFilters');
-  const editor = $('#itemEditor');
-  const itemSave = $('#itemSave');
-  const f = {
-    desc: $('#itemDesc'),
-    category: $('#itemCategory'),
-    price: $('#itemPrice'),
-    unit: $('#itemUnit'),
-    info: $('#itemInfo'),
+// products.js: add, edit, delete and search products with jQuery.
+
+const PRODUCTS_KEY = 'partwise.products';
+const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+let products = [];
+let editingId = null;
+
+// Saves the products to localStorage and refreshes the page.
+function save() {
+  localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+  render();
+}
+
+// Reads the form fields into a product object.
+function readProduct() {
+  return {
+    id: $('#id').val().trim(),
+    description: $('#description').val().trim(),
+    category: $('#category').val(),
+    unit: $('#unit').val(),
+    price: $('#price').val().trim(),
+    additionalInfo: $('#additionalInfo').val().trim()
   };
-  const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
-  const SAVE_KEY = 'partwise.items';
-  let products = [];
-  let catalogProducts = [];
-  let saved = JSON.parse(localStorage.getItem(SAVE_KEY) || '[]');
-  let editingId = null;
+}
 
-  // Saved items (localStorage) override the JSON catalog by id; new ids are appended.
-  function rebuild() {
-    const byId = new Map(catalogProducts.map(p => [p.id, p]));
-    saved.forEach(p => byId.set(p.id, p));
-    products = [...byId.values()];
+// Returns { field: message } for every invalid field.
+function validate(p) {
+  const errors = {};
+  if (!/^[A-Za-z0-9-]{2,40}$/.test(p.id)) errors.id = 'ID must be 2 to 40 letters, numbers or hyphens.';
+  else if (!editingId && products.some(x => x.id === p.id)) errors.id = 'That ID is already used.';
+  if (p.description.length < 2) errors.description = 'Enter a description.';
+  if (!p.category) errors.category = 'Choose a category.';
+  if (!p.unit) errors.unit = 'Choose a unit.';
+  if (!(Number(p.price) > 0)) errors.price = 'Price must be a number above 0.';
+  return errors;
+}
+
+// Marks each field red with its message, or clears it.
+function showErrors(errors) {
+  $('#productForm [name]').each(function () {
+    $(this).toggleClass('is-invalid', Boolean(errors[this.name]))
+      .next('.invalid-feedback').text(errors[this.name] || '');
+  });
+  $('#productForm .is-invalid').first().trigger('focus');
+}
+
+// Puts the form back into "add" mode.
+function resetForm() {
+  editingId = null;
+  $('#productForm')[0].reset();
+  $('#id').prop('readonly', false);
+  $('#formTitle').text('Add a product');
+  $('#saveBtn').text('Add product');
+  showErrors({});
+}
+
+// Loads a product into the form for editing.
+function startEdit(p) {
+  editingId = p.id;
+  $.each(readProduct(), name => $('#' + name).val(p[name]));
+  $('#id').prop('readonly', true);
+  $('#formTitle').text('Edit ' + p.id);
+  $('#saveBtn').text('Save changes');
+  $('#formAlert').prop('hidden', true);
+  $('#productForm')[0].scrollIntoView({ behavior: 'smooth' });
+}
+
+// Builds one product card. .text() keeps typed HTML from running.
+function card(p) {
+  const body = $('<div class="card-body d-flex flex-column">').append(
+    $('<p class="small text-body-secondary mb-1">').text(p.category + ' · ' + p.id),
+    $('<h3 class="h6 card-title">').text(p.description),
+    $('<p class="card-text small">').text(p.additionalInfo),
+    $('<p class="fw-bold mt-auto">').text(money.format(p.price) + ' / ' + p.unit),
+    $('<div class="d-flex gap-2">').append(
+      $('<button type="button" class="btn btn-sm btn-primary">Edit</button>').on('click', () => startEdit(p)),
+      $('<button type="button" class="btn btn-sm btn-outline-danger">Delete</button>').on('click', () => {
+        if (!confirm('Delete ' + p.description + '?')) return;
+        products = products.filter(x => x.id !== p.id);
+        if (editingId === p.id) resetForm();
+        save();
+      })
+    )
+  );
+  const image = p.image && $('<img class="card-img-top p-3" height="180" style="object-fit: contain" loading="lazy">')
+    .attr({ src: p.image, alt: p.description });
+  return $('<div class="col-md-6 col-lg-4">').append($('<div class="card h-100">').append(image, body));
+}
+
+// Redraws the cards, count, category filter and JSON view.
+function render() {
+  const term = $('#search').val().toLowerCase();
+  const category = $('#filter').val();
+  const shown = products.filter(p =>
+    (!category || p.category === category) &&
+    (p.id + ' ' + p.description + ' ' + p.additionalInfo).toLowerCase().includes(term));
+
+  $('#productGrid').empty().append(shown.map(card));
+  $('#noResults').prop('hidden', shown.length > 0);
+  $('#productCount').text(products.length);
+  $('#jsonView').text(JSON.stringify(products, null, 2));
+}
+
+$(function () {
+  // copy the category choices from the form into the filter
+  $('#category option').slice(1).clone().appendTo('#filter');
+  $('#search, #filter').on('input change', render);
+  $('#cancelBtn').on('click', resetForm);
+
+  $('#productForm').on('submit', function (event) {
+    event.preventDefault();
+    const p = readProduct();
+    const errors = validate(p);
+    showErrors(errors);
+    $('#formAlert').prop('hidden', true);
+    if (Object.keys(errors).length) return;
+
+    p.price = Number(p.price);
+    const old = products.find(x => x.id === editingId);
+    if (old) Object.assign(old, p);
+    else products.push(p);
+    const message = (old ? 'Updated ' : 'Added ') + p.description + '.';
+    resetForm();
+    save();
+    $('#formAlert').text(message).prop('hidden', false);
+  });
+
+  $('#downloadBtn').on('click', function () {
+    const blob = new Blob([JSON.stringify(products, null, 2)], { type: 'application/json' });
+    $('<a download="products.json">').attr('href', URL.createObjectURL(blob))[0].click();
+  });
+
+  // saved changes win; first visit starts from data/products.json
+  const saved = localStorage.getItem(PRODUCTS_KEY);
+  if (saved) {
+    products = JSON.parse(saved);
+    render();
+  } else {
+    $.getJSON('data/products.json')
+      .done(data => { products = data; save(); })
+      .fail(() => $('#noResults').text('Could not load data/products.json. Open the site with Live Server.').prop('hidden', false));
   }
-
-  // Load an existing card into the editor for updating.
-  function startEdit(product) {
-    editingId = product.id;
-    f.desc.val(product.description || '');
-    f.category.val(product.category || '');
-    f.price.val(product.price ?? '');
-    f.unit.val(product.unit || 'Each');
-    f.info.val(product.additionalInfo || '');
-    itemSave.text('Save changes');
-    bootstrap.Collapse.getOrCreateInstance($('#itemEditorBox')[0]).show();
-    $('html, body').animate({ scrollTop: 0 }, 200);
-  }
-
-  function resetEditor() {
-    editingId = null;
-    itemSave.text('Add item');
-    editor[0].reset();
-    f.unit.val('Each');
-  }
-
-  // Keep catalog text as text so product descriptions cannot inject HTML.
-  function element(tag, className, text) {
-    const node = $(`<${tag}>`).addClass(className);
-    if (text !== undefined) node.text(text);
-    return node;
-  }
-
-  // Shows the supplied photo, description, price and other part information.
-  function productCard(product) {
-    const column = element('div', 'col-md-6 col-lg-4');
-    const card = element('article', 'card h-100');
-    const body = element('div', 'card-body d-flex flex-column');
-    if (typeof product.image === 'string') {
-      const url = PartwiseCatalog.imageURL(product.image);
-      if (url) {
-        const image = element('img', 'card-img-top p-3');
-        image.attr({
-          src: url,
-          alt: product.imageAlt || product.description,
-          loading: 'lazy',
-          height: 180,
-        }).css('object-fit', 'contain').one('error', function () { $(this).hide(); });
-        card.append(image);
-      }
-    }
-    body.append(
-      element('p', 'small text-body-secondary mb-2', product.category),
-      element('h2', 'h5 card-title', product.description),
-      element('p', 'small text-body-secondary', 'Part ID: ' + product.id),
-      element('p', 'card-text', product.additionalInfo || ''),
-      element('p', 'fw-bold mt-auto mb-1', money.format(product.price) + ' / ' + product.unit)
-    );
-    if (typeof product.priceCheckedAt === 'string') {
-      body.append(element('p', 'small text-body-secondary', 'Price recorded: ' + product.priceCheckedAt));
-    }
-    if (typeof product.sourceUrl === 'string' && URL.canParse(product.sourceUrl)) {
-      const url = new URL(product.sourceUrl, document.baseURI);
-      if (url.protocol === 'https:' || url.protocol === 'http:') {
-        const link = element('a', 'align-self-start', 'View listing').attr({
-          href: url.href,
-          target: '_blank',
-          rel: 'noopener noreferrer',
-        });
-        body.append(link);
-      }
-    }
-    const edit = element('button', 'btn btn-sm btn-outline-dark align-self-start mt-2', 'Edit');
-    edit.attr('type', 'button').on('click', () => startEdit(product));
-    body.append(edit);
-    card.append(body);
-    column.append(card);
-    return column;
-  }
-
-  // Combine the existing search and category controls when redrawing cards.
-  function render() {
-    const term = search.val().trim().toLowerCase();
-    const shown = products.filter(product =>
-      (categoryFilter.val() === 'all' || product.category === categoryFilter.val()) &&
-      [product.id, product.description, product.category, product.additionalInfo || '']
-        .join(' ').toLowerCase().includes(term));
-    grid.empty();
-    shown.forEach(product => grid.append(productCard(product)));
-    count.text(`${shown.length} of ${products.length} parts`);
-    noResults.prop('hidden', shown.length !== 0);
-  }
-
-  // Load once and build filter values directly from the category manifest.
-  async function start() {
-    search.add(categoryFilter).add(clearFilters).prop('disabled', true);
-    try {
-      const catalog = await PartwiseCatalog.load();
-      catalogProducts = catalog.products;
-      rebuild();
-      categoryFilter.empty().append(new Option('All categories', 'all'));
-      catalog.categories.forEach(category => {
-        categoryFilter.append(new Option(category.label, category.id));
-        f.category.append(new Option(category.label, category.id));
-      });
-      search.on('input', render);
-      categoryFilter.on('change', render);
-      clearFilters.on('click', () => {
-        search.val('');
-        categoryFilter.val('all');
-        render();
-      });
-      editor.on('submit', event => {
-        event.preventDefault();
-        const id = editingId || 'item-' + Date.now();
-        const item = {
-          id,
-          description: f.desc.val().trim(),
-          category: f.category.val(),
-          price: Number(f.price.val()),
-          unit: f.unit.val().trim() || 'Each',
-          additionalInfo: f.info.val().trim(),
-        };
-        saved = saved.filter(p => p.id !== id).concat(item);
-        localStorage.setItem(SAVE_KEY, JSON.stringify(saved));
-        resetEditor();
-        rebuild();
-        render();
-      });
-      $('#itemClear').on('click', resetEditor);
-      search.add(categoryFilter).add(clearFilters).prop('disabled', false);
-      render();
-    } catch (error) {
-      grid.empty();
-      noResults.prop('hidden', true);
-      count.text(location.protocol === 'file:'
-        ? 'Could not load the direct-open catalog. Refresh it with node scripts/build-catalog.cjs, then reopen this page.'
-        : 'Could not load the parts. Check the category JSON files and reload the page.');
-      console.error('Catalog loading failed:', error);
-    }
-  }
-
-  start();
-})();
+});
