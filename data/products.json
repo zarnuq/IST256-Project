@@ -6,7 +6,7 @@
     "unit": "Each",
     "price": 289.99,
     "additionalInfo": "8 cores, 16 threads; AM5; cooler not included",
-    "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/db6178ce-dd3b-40e5-a3de-0f551f1ea180.jpg;maxHeight=1920;maxWidth=900?format=webp"
+    "image": "images/products/amd-100-000001404.webp"
   },
   {
     "id": "AMD-100-100001084WOF",
@@ -15,7 +15,7 @@
     "unit": "Each",
     "price": 444,
     "additionalInfo": "8 cores, 16 threads; 96 MB 3D V-Cache; AM5",
-    "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/43526f44-592b-47fe-bd57-c9be5a7c16e9.jpg;maxHeight=1920;maxWidth=900?format=webp"
+    "image": "images/products/amd-100-100001084wof.webp"
   },
   {
     "id": "BX80768285K",
@@ -24,7 +24,7 @@
     "unit": "Each",
     "price": 629.99,
     "additionalInfo": "24 cores, up to 5.7 GHz; LGA 1851; cooler not included",
-    "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/0224860a-6519-429e-b610-38285cc3d33f.jpg;maxHeight=1920;maxWidth=900?format=webp"
+    "image": "images/products/bx80768285k.webp"
   },
   {
     "id": "rtx-5090-black-oc",
@@ -33,7 +33,7 @@
     "unit": "Each",
     "price": 6859.99,
     "additionalInfo": "32 GB GDDR7; 575 W; 358 mm long",
-    "image": "https://media.ldlc.com/r1600/ld/products/00/06/20/51/LD0006205114.jpg"
+    "image": "images/products/rtx-5090-black-oc.webp"
   },
   {
     "id": "rtx-5080-white-oc",
@@ -42,7 +42,7 @@
     "unit": "Each",
     "price": 1649.99,
     "additionalInfo": "16 GB GDDR7; 360 W; 303 mm long",
-    "image": "https://cdn.mwave.com.au/images/400/msi_geforce_rtx_5080_ventus_3x_oc_16gb_video_card_white_ac82154_43243.jpg"
+    "image": "images/products/rtx-5080-white-oc.jpg"
   },
   {
     "id": "rtx-5070-ti-black-oc",
@@ -51,7 +51,7 @@
     "unit": "Each",
     "price": 1612.49,
     "additionalInfo": "16 GB GDDR7; 300 W; 329 mm long",
-    "image": "https://cdn.ozone.bg/media/catalog/product/v/i/videokarta_asus_tuf_gaming_geforce_rtx_5070_ti_oc_16gb_gddr7_1742372193_0.jpg"
+    "image": "images/products/rtx-5070-ti-black-oc.webp"
   },
   {
     "id": "rtx-5070-black-oc",
@@ -60,7 +60,7 @@
     "unit": "Each",
     "price": 1103,
     "additionalInfo": "12 GB GDDR7; 250 W; 290 mm long",
-    "image": "https://media.pichau.com.br/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/g/v/gv-n5070gaming-oc-12gd9.jpg"
+    "image": "images/products/rtx-5070-black-oc.jpg"
   },
   {
     "id": "rtx-5060-ti-16gb-black-oc",
@@ -69,7 +69,7 @@
     "unit": "Each",
     "price": 499.99,
     "additionalInfo": "16 GB GDDR7; 180 W; 229 mm long",
-    "image": "https://matrixwarehouse.co.za/cdn/shop/files/DUAL-RTX5060TI-O16G-WR-01.jpg?v=1762759773&width=1946"
+    "image": "images/products/rtx-5060-ti-16gb-black-oc.webp"
   },
   {
     "id": "rx-9070-black-oc",
@@ -78,7 +78,7 @@
     "unit": "Each",
     "price": 679.99,
     "additionalInfo": "16 GB GDDR6; 245 W; 288 mm long",
-    "image": "https://images.tcdn.com.br/img/img_prod/1361945/placa_de_video_gigabyte_rx_9070_gaming_oc_br_16gb_gddr6_fsr_br_gv_r9070gaming_oc_16gd_5315_1_658aa24520da52be95a5dc665a0f861b.jpg"
+    "image": "images/products/rx-9070-black-oc.webp"
   },
   {
     "id": "PRIME-B550M-A-WIFI-II",
@@ -87,7 +87,7 @@
     "unit": "Each",
     "price": 109.99,
     "additionalInfo": "Micro-ATX; AM4; DDR4; Wi-Fi",
-    "image": "https://dlcdnwebimgs.asus.com/gain/2d1010dc-327c-4b58-88fb-89a677a32b02/"
+    "image": "images/products/prime-b550m-a-wifi-ii.webp"
   },
   {
     "id": "PRIME-X870-P-WIFI",
@@ -96,7 +96,7 @@
     "unit": "Each",
     "price": 189.99,
     "additionalInfo": "ATX; AM5; Wi-Fi",
-    "image": "https://dlcdnwebimgs.asus.com/files/media/0397c9d8-60cf-4bee-b571-5005dd07a92a/v1.2/features/images/large/s1/pd.webp"
+    "image": "images/products/prime-x870-p-wifi.webp"
   },
   {
     "id": "ROG-STRIX-X870E-E-GAMING-WIFI",
@@ -105,7 +105,7 @@
     "unit": "Each",
     "price": 379.99,
     "additionalInfo": "ATX; AM5; Wi-Fi",
-    "image": "https://dlcdnwebimgs.asus.com/gain/C2A10896-76C0-4772-9A3A-69D7B0C00441"
+    "image": "images/products/rog-strix-x870e-e-gaming-wifi.webp"
   },
   {
     "id": "CMP32GX5M2B6000C30",
@@ -114,7 +114,7 @@
     "unit": "Kit",
     "price": 676.99,
     "additionalInfo": "2 x 16 GB DDR5; Intel XMP; RGB",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/Dominator%20Titanium/enhanced%20images/black/2UP/DOMINATOR_TITANIUM_RGB_DDR5_BLACK_2UP_Artboard01_AA.webp"
+    "image": "images/products/cmp32gx5m2b6000c30.webp"
   },
   {
     "id": "CMH32GX5M2B6000Z30K",
@@ -123,7 +123,7 @@
     "unit": "Kit",
     "price": 569.99,
     "additionalInfo": "2 x 16 GB DDR5; AMD EXPO and Intel XMP; RGB",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-amd-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-32GB-GRAY_01.webp"
+    "image": "images/products/cmh32gx5m2b6000z30k.webp"
   },
   {
     "id": "CMH32GX5M2B6000C30",
@@ -132,7 +132,7 @@
     "unit": "Kit",
     "price": 559.99,
     "additionalInfo": "2 x 16 GB DDR5; Intel XMP; RGB",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/2up/VENGEANCE_RGB_DDR5_BLK_01.webp"
+    "image": "images/products/cmh32gx5m2b6000c30.webp"
   },
   {
     "id": "CSSD-F1000GBMP600CXTR2",
@@ -141,7 +141,7 @@
     "unit": "Each",
     "price": 254.99,
     "additionalInfo": "M.2 2280; PCIe 4.0; 5-year warranty",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Storage/mp600-core-xt/MP600_CORE_XT_01.webp"
+    "image": "images/products/cssd-f1000gbmp600cxtr2.webp"
   },
   {
     "id": "CSSD-F1000GBMP600ENH",
@@ -150,7 +150,7 @@
     "unit": "Each",
     "price": 439.99,
     "additionalInfo": "M.2 2280; PCIe 4.0; up to 7,000 MB/s read",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Storage/mp600-elite/CSSD-F1000GBMP600ENH/Gallery/MP600_ELITE_01.webp"
+    "image": "images/products/cssd-f1000gbmp600enh.webp"
   },
   {
     "id": "CSSD-F1000GBMP600MN",
@@ -159,7 +159,7 @@
     "unit": "Each",
     "price": 414.99,
     "additionalInfo": "M.2 2230 for handhelds; PCIe 4.0",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Storage/CSSD-F1000GBMP600MN/Gallery/MP600_MINI_01.webp"
+    "image": "images/products/cssd-f1000gbmp600mn.webp"
   },
   {
     "id": "CC-9011322-WW",
@@ -168,7 +168,7 @@
     "unit": "Each",
     "price": 119.99,
     "additionalInfo": "Glass panels; three ARGB fans included",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/3500x/gallery/CC-9011322-WW/CC-9011322-WW_01.webp"
+    "image": "images/products/cc-9011322-ww.webp"
   },
   {
     "id": "CC-9011270-WW",
@@ -177,7 +177,7 @@
     "unit": "Each",
     "price": 84.99,
     "additionalInfo": "Modular; tempered glass; white",
-    "image": "https://c1.neweggimages.com/productimage/nb640/11-139-231-12.png"
+    "image": "images/products/cc-9011270-ww.webp"
   },
   {
     "id": "CC-9011200-WW",
@@ -186,7 +186,7 @@
     "unit": "Each",
     "price": 74.99,
     "additionalInfo": "Glass side panel; two 120 mm fans included",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/base-4000d-airflow-config/Gallery/4000D_AF_BLACK_01.webp"
+    "image": "images/products/cc-9011200-ww.webp"
   },
   {
     "id": "CP-9020336-NA",
@@ -195,7 +195,7 @@
     "unit": "Each",
     "price": 139.99,
     "additionalInfo": "850 W; ATX 3.1; low noise",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Power-Supply-Units/base-rme-series-with-thermalprotect-12v-2x6-2025/gallery/RM850e/Black/RM850e_ThermalProtect_Black_Artboard01_AA.webp"
+    "image": "images/products/cp-9020336-na.webp"
   },
   {
     "id": "CP-9020297-NA",
@@ -204,7 +204,7 @@
     "unit": "Each",
     "price": 189.99,
     "additionalInfo": "1000 W; fully modular; ATX 3.1",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020297-NA_01.webp"
+    "image": "images/products/cp-9020297-na.webp"
   },
   {
     "id": "CP-9020295-NA",
@@ -213,7 +213,7 @@
     "unit": "Each",
     "price": 89.99,
     "additionalInfo": "750 W; fully modular; ATX 3.1",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/rme-series-2025/Gallery/CP-9020295-NA_01.webp"
+    "image": "images/products/cp-9020295-na.webp"
   },
   {
     "id": "CO-9051053-WW",
@@ -222,7 +222,7 @@
     "unit": "Each",
     "price": 44.99,
     "additionalInfo": "120 mm; reverse airflow; RGB; white",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/icue-link-lx-r-rgb/Gallery/CO-9051053-WW/CO-9051053-WW_01.webp"
+    "image": "images/products/co-9051053-ww.webp"
   },
   {
     "id": "CO-9051001-WW",
@@ -231,7 +231,7 @@
     "unit": "Each",
     "price": 54.99,
     "additionalInfo": "120 mm; RGB",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/CO-9051001-WW/gallery/QX120_RGB_RENDER_01.webp"
+    "image": "images/products/co-9051001-ww.webp"
   },
   {
     "id": "CO-9051021-WW",
@@ -240,6 +240,6 @@
     "unit": "Each",
     "price": 34.99,
     "additionalInfo": "120 mm; RGB; white",
-    "image": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Fans/rx-series/CO-9051021-WW/Gallery/RX120_RGB_WHITE_RENDER_01.webp"
+    "image": "images/products/co-9051021-ww.webp"
   }
 ]
