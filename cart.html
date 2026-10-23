@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | Partwise</title>
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/brite/bootstrap.min.css">
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-cpu-fill me-1" aria-hidden="true"></i>
+        Partwise
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="members.html">Members</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"
+              href="products.html">
+              Shop
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Builder</a>
+          </li>
+        </ul>
+
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-dark active" href="cart.html" aria-current="page" aria-label="Cart">
+            <i class="bi bi-cart" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn btn-primary" href="signup.html">
+            Join now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5 flex-grow-1">
+    <h1 class="mb-4">Shopping Cart</h1>
+    <div class="row">
+
+      <!-- search products -->
+      <div class="col-md-7 mb-4">
+        <h2 class="h5">Find products</h2>
+        <input type="search" class="form-control mb-2" id="search" placeholder="Search products">
+        <label for="qty" class="form-label">Quantity</label>
+        <input type="number" class="form-control mb-2" id="qty" value="1" min="1" max="10">
+        <div class="invalid-feedback">Quantity must be a whole number from 1 to 10.</div>
+        <ul id="results" class="list-group mt-2"></ul>
+      </div>
+
+      <!-- cart -->
+      <div class="col-md-5">
+        <h2 class="h5">Your cart</h2>
+        <ul id="cartItems" class="list-group mb-2"></ul>
+        <p>Total: $<span id="cartTotal">0.00</span></p>
+        <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+        <p id="message" class="mt-2"></p>
+      </div>
+    </div>
+
+    <!-- cart JSON that checkout sends -->
+    <h2 class="h5 mt-4">cart.json</h2>
+    <pre id="jsonView" class="border p-3 bg-light"></pre>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span><strong>Partwise</strong> &middot; Web Development group project</span>
+      <span class="small">Oliver Aaron &middot; Jeremy Hou &middot; Miles Alford &middot; Anson Poon &middot; Aryan
+        Vir</span>
+    </div>
+  </footer>
+
+</body>
+</html>
